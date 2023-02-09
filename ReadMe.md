@@ -21,6 +21,8 @@
    - If you are on Windows, you might need to run command prompt as Administrator)
    - If you do already have it installed, you might have forgotten to put it in PATH Reinstall it and make sure to check the box that says "Add Python to PATH" And Or PIP
 
+![](https://i.alexflipnote.dev/4QPnZiX.gif)
+
 ## ^^ all of the text above is from https://github.com/AlexFlipnote projects and is a good standard to have when giving python scripts to others.
 
 4. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease.
