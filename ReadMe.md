@@ -1,6 +1,5 @@
 # History
-This was originally created in 2022 by thorax(Mattie) on Reddit. I later added comments and instructions and a lot more QOL for people who weren't as tech savvy as he was. I then made the .bat files and have been maintaining it for the last year on my own system. i have only just decided that i feel like it should be on github as it is alot easier to find than if it fell into the void of reddit.
-
+This was originally created in 2022 by thorax on Reddit. I later added comments and a lot more QOL for people who weren't as tech savvy as he was. I then made the .bat files and have been maintaining it for the last year on my own system. If thorax ever finds it, I will happily give him contributor and ownership of this project. He still deserves credit as the project's original creator.
 
 # Requirements 🧾
 - Python 3.8 or above (https://www.python.org/downloads)
@@ -45,7 +44,14 @@ This was originally created in 2022 by thorax(Mattie) on Reddit. I later added c
 - After you have edited them, right click on either one or both and create shortcuts for them. You can then move them to your desktop, remove your original RSI Launcher shortcut, and then go into the properties of the shortcuts and give them icons and edit their names to look identical to a normal boot.
 
 
+# Help needed?
+Join https://discord.gg/armco and ask for JohnTheMedic.
+
 Hope you enjoy it :I
 
-## Help needed?
-Join https://discord.gg/armco and ask for JohnTheMedic.
+## Contributors
+Big thanks to all of the amazing people who have helped by contributing to this project!
+
+<a href="https://github.com/JohnTheMedic/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JohnTheMedic/SC-EAC-Screenshot-SplashScreen" />
+</a>
