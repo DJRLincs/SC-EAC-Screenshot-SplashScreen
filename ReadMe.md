@@ -1,3 +1,13 @@
+
+# Requirements 🧾
+- Python 3.8 or above (https://www.python.org/downloads)
+  - Recommended version [???](https://www.python.org/downloads/)
+- Pillow .
+  - Which should install with requirements.txt
+- Patience
+  - Take youre time if you need help just ask trust me
+
+
 # How to use ✨
 1. Download and install [Python](https://www.python.org/downloads) if you haven't already.
 
