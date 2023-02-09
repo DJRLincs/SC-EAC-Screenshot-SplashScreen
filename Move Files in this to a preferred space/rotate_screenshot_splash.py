@@ -2,6 +2,7 @@
 # Replace the StarCitizen\LIVE\EasyAntiCheat\SplashScreen.png file with a random picture from the folder StarCitizen\LIVE\ScreenShots
 
 import sys
+import json
 import os
 import random
 import shutil
@@ -22,14 +23,74 @@ except ImportError:
     )
 
 
+## Try except block is useful for when you'd like to capture errors
+#try:
+#    with open("config.json") as f:
+#        config = json.load(f)
+#except (FileNotFoundError, json.JSONDecodeError):
+#    # You can in theory also do "except:" or "except Exception:", but it is not recommended
+#    # unless you want to suppress all errors
+#    config = {}
+#
+#
+#while True:
+#    # If no token is stored in "config" the value defaults to None
+#    token = config.get("token", None)
+#    if token:
+#        print(f"\n--- Detected token in {Fore.GREEN}./config.json{Fore.RESET} (saved from a previous run). Using stored token. ---\n")
+#    else:
+#        # Take input from the user if no token is detected
+#        token = input("> ")
+#
+#    # Validates if the token you provided was correct or not
+#    # There is also another one called aiohttp.ClientSession() which is asynchronous
+#    # However for such simplicity, it is not worth playing around with async
+#    # and await keywords outside of the event loop
+#    try:
+#        data = requests.get("https://discord.com/api/v10/users/@me", headers={
+#            "Authorization": f"Bot {token}"
+#        }).json()
+#    except requests.exceptions.RequestException as e:
+#        if e.__class__ == requests.exceptions.ConnectionError:
+#            exit(f"{Fore.RED}ConnectionError{Fore.RESET}: Discord is commonly blocked on public networks, please make sure discord.com is reachable!")
+#
+#        elif e.__class__ == requests.exceptions.Timeout:
+#            exit(f"{Fore.RED}Timeout{Fore.RESET}: Connection to Discord's API has timed out (possibly being rate limited?)")
+#
+#        # Tells python to quit, along with printing some info on the error that occured
+#        exit(f"Unknown error has occurred! Additional info:\n{e}")
+#
+#    # If the token is correct, it will continue the code
+#    if data.get("id", None):
+#        break  # Breaks out of the while loop
+#
+#    # If the token is incorrect, an error will be printed
+#    # You will then be asked to enter a token again (while Loop)
+#    print(f"\nSeems like you entered an {Fore.RED}invalid token{Fore.RESET}. Please enter a valid token (see Github repo for help).")
+#
+#    # Resets the config so that it doesn't use the previous token again
+#    config.clear()
+
+
+## This is used to save the token for the next time you run the bot
+#with open("config.json", "w") as f:
+#    # Check if 'token' key exists in the config.json file
+#    config["token"] = token
+#
+#    # This dumps our working setting to the config.json file
+#    # Indent is used to make the file look nice and clean
+#    # If you don't want to indent, you can remove the indent=2 from code
+#    json.dump(config, f, indent=2)
+
+
 ############################################################################################################
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
 
 # constants
 # the folder where the screenshots are (your path will be different than mine, edit it)
-SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\screenshots"
+SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\screenshots"
 # the folder where the new splash screen will be (your path will be different than mine, edit it)
-SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\EasyAntiCheat"
+SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\EasyAntiCheat"
 
 
 
@@ -73,7 +134,7 @@ def resize_and_crop(image, size, crop_type='middle'):
     # create a new image that is the size of the splash screen
     new_image = Image.new("RGB", size)
     # resize the image
-    image = image.resize(new_dimensions, Image.ANTIALIAS)
+    image = image.resize(new_dimensions, Image.LANCZOS)
 
     # find the middle of the image
     if crop_type == 'top':
