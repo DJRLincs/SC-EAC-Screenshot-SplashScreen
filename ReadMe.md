@@ -49,8 +49,8 @@ Join https://discord.gg/armco and ask for JohnTheMedic.
 
 Hope you enjoy it :I
 
-## Contributors
-Big thanks to all of the amazing people who have helped by contributing to this project!
+# Contributors
+Big thanks to all of the people who worked on this project!
 
 <a href="https://github.com/JohnTheMedic/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=JohnTheMedic/SC-EAC-Screenshot-SplashScreen" />
