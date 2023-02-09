@@ -52,6 +52,6 @@ Hope you enjoy it :I
 # Contributors
 Big thanks to all of the people who worked on this project!
 
-<a href="https://github.com/JohnTheMedic/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=JohnTheMedic/SC-EAC-Screenshot-SplashScreen" />
+<a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DavidRoseLincsc/SC-EAC-Screenshot-SplashScreen" />
 </a>
