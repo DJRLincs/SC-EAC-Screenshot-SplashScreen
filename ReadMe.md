@@ -1,7 +1,7 @@
 
 # Requirements 🧾
 - Python 3.8 or above (https://www.python.org/downloads)
-  - Recommended version [???](https://www.python.org/downloads/)
+  - Recommended version [3.10.2](https://www.python.org/downloads/release/python-3102/)
 - Pillow .
   - Which should install with requirements.txt
 - Patience
