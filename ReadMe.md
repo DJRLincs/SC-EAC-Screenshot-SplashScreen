@@ -1,3 +1,5 @@
+# History
+this was orignally made in 2022 by thorax on reddit i then added comments and alot more instructions and QOL for people who werent as tech savy as he was i then made the .bat's and have been maintaing it for the last year on my own system building more and more up now i am happy to have it handed out to the public and if thorax ever finds it i will happily give him contributer and ownership of this project i have very much made it my own but he still deserves credit as much as anyone else.
 
 # Requirements 🧾
 - Python 3.8 or above (https://www.python.org/downloads)
