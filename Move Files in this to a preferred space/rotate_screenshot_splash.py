@@ -22,11 +22,29 @@ except ImportError:
     )
 
 
+############################################################################################################
+##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
+
 # constants
 # the folder where the screenshots are (your path will be different than mine, edit it)
 SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\screenshots"
 # the folder where the new splash screen will be (your path will be different than mine, edit it)
 SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\EasyAntiCheat"
+
+
+
+
+##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
+############################################################################################################
+
+
+
+
+
+
+
+
+
 # the file where the new splash screen will be
 SPLASH_FILE = "SplashScreen.png"
 # the size of the new splash screen
