@@ -53,5 +53,5 @@ Hope you enjoy it :I
 Big thanks to all of the people who worked on this project!
 
 <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DavidRoseLincsc/SC-EAC-Screenshot-SplashScreen" />
+  <img src="https://contrib.rocks/image?repo=DavidRoseLincs/SC-EAC-Screenshot-SplashScreen" />
 </a>
