@@ -1,4 +1,4 @@
-# Usage ✨
+# How to use ✨
 1. Download and install [Python](https://www.python.org/downloads) if you haven't already.
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
@@ -10,11 +10,13 @@
 3. Install `requirements.txt` with the command `pip install -r requirements.txt`
    - If you are on Windows, you might need to run command prompt as Administrator)
 
-## ^^ all of this Usage stuff is from https://github.com/AlexFlipnote and is a good standard to have when giving python scripts to others.
+## ^^ all of the text above is from https://github.com/AlexFlipnote projects and is a good standard to have when giving python scripts to others.
 
 4. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease.
 
 5. Then, in rotate_screenshot_splash.py, change any references to a folder or location to the appropriate spaces for your system. 
+
+6. Once checking all of youre locations press the start_Basic.bat.
 
 # Makes the script Automatic OPTIONAL:
 
