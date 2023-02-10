@@ -127,11 +127,11 @@ def resize_and_crop(image, size, crop_type='middle'):
     # calculate the ratio of the new image to the old image
     ratio = min(size[0] / image.size[0], size[1] / image.size[1])
     # print the ratio
-    print("Ratio: " + str(ratio))
+    print(f"Ratio: {str(ratio)}")
     # the dimensions of the new image
     new_dimensions = (int(image.size[0] * ratio), int(image.size[1] * ratio))
     # print the new dimensions
-    print("New dimensions: " + str(new_dimensions))
+    print(f"New dimensions: {str(new_dimensions)}")
    
     # create a new image that is the size of the splash screen
     new_image = Image.new("RGB", size)
@@ -192,7 +192,7 @@ def main():
     # get the random screenshot
     random_screenshot = get_random_screenshot()
     # print the random screenshot and say what we're doing
-    print("Random screenshot: " + random_screenshot)
+    print(f"Random screenshot: {random_screenshot}")
     print("Replacing splash screen with random screenshot...")
     
     # get the path to the random screenshot
