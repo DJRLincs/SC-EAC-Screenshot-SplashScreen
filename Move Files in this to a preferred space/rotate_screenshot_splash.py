@@ -82,6 +82,8 @@ except ImportError:
 #    # If you don't want to indent, you can remove the indent=2 from code
 #    json.dump(config, f, indent=2)
 
+#^^^ Possible Feature to add in the future ^^^
+
 
 ############################################################################################################
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
