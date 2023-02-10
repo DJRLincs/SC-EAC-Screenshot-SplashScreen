@@ -23,66 +23,48 @@ except ImportError:
     )
 
 
-## Try except block is useful for when you'd like to capture errors
-#try:
-#    with open("config.json") as f:
-#        config = json.load(f)
-#except (FileNotFoundError, json.JSONDecodeError):
-#    # You can in theory also do "except:" or "except Exception:", but it is not recommended
-#    # unless you want to suppress all errors
-#    config = {}
-#
-#
-#while True:
-#    # If no token is stored in "config" the value defaults to None
-#    token = config.get("token", None)
-#    if token:
-#        print(f"\n--- Detected token in {Fore.GREEN}./config.json{Fore.RESET} (saved from a previous run). Using stored token. ---\n")
-#    else:
-#        # Take input from the user if no token is detected
-#        token = input("> ")
-#
-#    # Validates if the token you provided was correct or not
-#    # There is also another one called aiohttp.ClientSession() which is asynchronous
-#    # However for such simplicity, it is not worth playing around with async
-#    # and await keywords outside of the event loop
-#    try:
-#        data = requests.get("https://discord.com/api/v10/users/@me", headers={
-#            "Authorization": f"Bot {token}"
-#        }).json()
-#    except requests.exceptions.RequestException as e:
-#        if e.__class__ == requests.exceptions.ConnectionError:
-#            exit(f"{Fore.RED}ConnectionError{Fore.RESET}: Discord is commonly blocked on public networks, please make sure discord.com is reachable!")
-#
-#        elif e.__class__ == requests.exceptions.Timeout:
-#            exit(f"{Fore.RED}Timeout{Fore.RESET}: Connection to Discord's API has timed out (possibly being rate limited?)")
-#
-#        # Tells python to quit, along with printing some info on the error that occured
-#        exit(f"Unknown error has occurred! Additional info:\n{e}")
-#
-#    # If the token is correct, it will continue the code
-#    if data.get("id", None):
-#        break  # Breaks out of the while loop
-#
-#    # If the token is incorrect, an error will be printed
-#    # You will then be asked to enter a token again (while Loop)
-#    print(f"\nSeems like you entered an {Fore.RED}invalid token{Fore.RESET}. Please enter a valid token (see Github repo for help).")
-#
-#    # Resets the config so that it doesn't use the previous token again
-#    config.clear()
+# # try except block is useful for when you'd like to capture errors
+# try:
+#     with open("config.json") as f:
+#         config = json.load(f)
+# except (filenotfounderror, json.jsondecodeerror):
+#     # you can in theory also do "except:" or "except exception:", but it is not recommended
+#     # unless you want to suppress all errors
+#     config = {}
 
 
-## This is used to save the token for the next time you run the bot
-#with open("config.json", "w") as f:
-#    # Check if 'token' key exists in the config.json file
-#    config["token"] = token
-#
-#    # This dumps our working setting to the config.json file
-#    # Indent is used to make the file look nice and clean
-#    # If you don't want to indent, you can remove the indent=2 from code
-#    json.dump(config, f, indent=2)
+# while true:
+#     # if no location is stored in "config" the value defaults to none
+#     location = config.get("location", none)
+#     if location:
+#         print(f"\n--- detected location in {fore.green}./config.json{fore.reset} (saved from a previous run). using stored location. ---\n")
+#     else:
+#         # take input from the user if no location is detected
+#         location = input("> ")
 
-#^^^ Possible Feature to add in the future ^^^
+#     # if the location is correct, it will continue the code
+#     if data.get("id", none):
+#         break  # breaks out of the while loop
+
+#     # if the location is incorrect, an error will be printed
+#     # you will then be asked to enter a location again (while loop)
+#     print(f"\nseems like you entered an {fore.red}invalid location{fore.reset}. please enter a valid location (see github repo for help).")
+
+#     # resets the config so that it doesn't use the previous location again
+#     config.clear()
+
+
+# # this is used to save the location for the next time you run the bot
+# with open("config.json", "w") as f:
+#     # check if 'location' key exists in the config.json file
+#     config["location"] = location
+
+#     # this dumps our working setting to the config.json file
+#     # indent is used to make the file look nice and clean
+#     # if you don't want to indent, you can remove the indent=2 from code
+#     json.dump(config, f, indent=2)
+
+#^^^ Possible Feature to add in the future that wont work for some reason idk why D; ^^^
 
 
 ############################################################################################################
