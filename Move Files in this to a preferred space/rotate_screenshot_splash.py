@@ -179,7 +179,7 @@ def backup_splash_screen():
     # get the path to the splash screen
     splash_path = os.path.join(SPLASH_FOLDER, SPLASH_FILE)
     # get the path to the backup splash screen, with today's date and time as a suffix
-    backup_splash_path = os.path.join(SPLASH_FOLDER, "SplashScreen_" + str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".png")
+    backup_splash_path = os.path.join(SPLASH_FOLDER, "SplashScreen_{}.png".format(str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))))
     # copy the splash screen to the backup splash screen
     shutil.copyfile(splash_path, backup_splash_path)
     # print the backup splash screen path
