@@ -67,6 +67,11 @@ except ImportError:
 #^^^ Possible Feature to add in the future that wont work for some reason idk why D; ^^^
 
 
+
+
+
+
+
 ############################################################################################################
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
 
@@ -75,9 +80,6 @@ except ImportError:
 SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\screenshots"
 # the folder where the new splash screen will be (your path will be different than mine, edit it)
 SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\EasyAntiCheat"
-
-
-
 
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
 ############################################################################################################
