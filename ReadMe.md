@@ -1,6 +1,7 @@
 <p align="center">
   <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/737301647440740453/1077544580737662976/banner.png" width="750px">
 </p>
+
 # What the hell does this do?
 This script's purpose is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder and then replace them with a different screenshot every time the script is run. Currently, you will need to edit the script with the location of your folders, but in the future this might change.
 
