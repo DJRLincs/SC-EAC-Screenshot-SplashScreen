@@ -1,3 +1,8 @@
+# What the hell does this do?
+
+
+
+
 # History
 This was originally created in 2022 by thorax on Reddit. I later added comments and a lot more QOL for people who weren't as tech savvy as he was. I then made the .bat files and have been maintaining it for the last year on my own system. If thorax ever finds it, I will happily give him contributor and ownership of this project. He still deserves credit as the project's original creator.
 
