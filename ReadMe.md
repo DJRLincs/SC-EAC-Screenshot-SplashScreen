@@ -61,3 +61,5 @@ Big thanks to all of the people who worked on this project!
 - I really want to look into replacing the images in the launcher with screenshot pictures instead but i have no idea how to do it just yet
 
 - possibly making it so you can just choose youre directory once and not have to have the locations hardcoded in per system
+
+- MASSIVE MAYBE this project was orginally made for Star Citizen's [EAC](https://www.easy.ac/) but their is a chance that it gets renamed and starts being made to work for all [EAC](https://www.easy.ac/) games if possible
