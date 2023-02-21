@@ -1,8 +1,11 @@
+<p align="center">
+  <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/737301647440740453/1077544580737662976/banner.png" width="750px">
+</p>
 # What the hell does this do?
 This script's purpose is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder and then replace them with a different screenshot every time the script is run. Currently, you will need to edit the script with the location of your folders, but in the future this might change.
 
 # History
-This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the.bat files and have been using them on my own system for the past year. If Thorax ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
+This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
 
 # Requirements 🧾
 - Python 3.8 or above (https://www.python.org/downloads)
