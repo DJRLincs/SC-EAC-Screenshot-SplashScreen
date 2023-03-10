@@ -65,7 +65,7 @@ Big thanks to all of the people who worked on this project!
 
 
 # To the future
-- I'd like to replace the photos in the launcher with screenshots as well, but I'm not sure how to achieve it just yet.
+- I'd like to replace the carousel (Wallpaper's) in RSI launcher with screenshots as well, but I'm not sure how to achieve it just yet.
 
 - allowing you to select your directory only once rather than having the locations hardcoded into each system [ACHIEVED AS OF 10/03/23]
 
