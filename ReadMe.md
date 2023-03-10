@@ -18,15 +18,17 @@ This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com
 
 
 # How to use ✨
-1. Download and install [Python](https://www.python.org/downloads) if you haven't already.
+1. Download the [Project](https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/archive/refs/heads/master.zip) into a zip folder.
+
+2. Download and install [Python](https://www.python.org/downloads) if you haven't already.
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
-2. Open CMD/Terminal inside this folder.
+3. Open CMD/Terminal inside this folder.
    - On Windows, open a `command prompt` as administrator. Type `cd` with a space and drag the desired folder into it. Press enter.
 
  ![](https://i.alexflipnote.dev/7PvV4Eo.png)
 
-3. Install `requirements.txt` with the command `pip install -r requirements.txt`
+4. Install `requirements.txt` with the command `pip install -r requirements.txt`
    - If you are on Windows, you might need to run command prompt as Administrator)
    - If you do already have it installed, you might have forgotten to put it in PATH Reinstall it and make sure to check the box that says "Add Python to PATH" And Or PIP
 
@@ -34,9 +36,9 @@ This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com
 
 ## ^^ all of the text above is from https://github.com/AlexFlipnote projects and is a good standard to have when giving python scripts to others.
 
-4. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease. 
+5. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease. 
 
-5. press the start_Basic.bat.
+6. press the start_Basic.bat.
 
 # Makes the script Automatic OPTIONAL:
 
