@@ -79,6 +79,8 @@ if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
     print("The config.json file has been updated with the new locations \n")
     print("Fun fact: you can also change the location of the screenshots folder to have a folder of selected pictures replace the splash screen \n")
 
+    
+
 
 ############################################################################################################
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
@@ -91,13 +93,6 @@ if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
 
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
 ############################################################################################################
-
-
-
-
-
-
-
 
 
 # the file where the new splash screen will be
