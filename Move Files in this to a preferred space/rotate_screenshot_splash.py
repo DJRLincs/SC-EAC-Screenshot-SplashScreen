@@ -61,6 +61,7 @@ if SCREENSHOTS_FOLDER == "" or SPLASH_FOLDER == "":
             "splash_folder": SPLASH_FOLDER
         }
         json.dump(config, f, indent=4)
+        print("Fun fact: you can also change the location of the screenshots and splashscreen folder in the config.json file \n")
 
 # if location in config.json file is not correct ask them to refill the config.json file
 if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
@@ -75,6 +76,8 @@ if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
             "splash_folder": SPLASH_FOLDER
         }
         json.dump(config, f, indent=4)
+    print("The config.json file has been updated with the new locations \n")
+    print("Fun fact: you can also change the location of the screenshots folder to have a folder of selected pictures replace the splash screen \n")
 
 
 ############################################################################################################
