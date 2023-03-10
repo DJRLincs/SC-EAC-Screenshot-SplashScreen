@@ -3,7 +3,7 @@
 </p>
 
 # What the hell does this do?
-This script's purpose is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder and then replace them with a different screenshot every time the script is run. Currently, you will need to edit the script with the location of your folders, but in the future this might change.
+This script's objective is to substitute screenshots from your Star Citizen screenshots folder for your [EAC](https://www.easy.ac/) loading screen, and to substitute a different screenshot each time the script is executed.
 
 # History
 This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
@@ -18,15 +18,17 @@ This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com
 
 
 # How to use ✨
-1. Download and install [Python](https://www.python.org/downloads) if you haven't already.
+1. Download the [Project](https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/archive/refs/heads/master.zip) into a zip folder.
+
+2. Download and install [Python](https://www.python.org/downloads) if you haven't already.
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
-2. Open CMD/Terminal inside this folder.
+3. Open CMD/Terminal inside this folder.
    - On Windows, open a `command prompt` as administrator. Type `cd` with a space and drag the desired folder into it. Press enter.
 
  ![](https://i.alexflipnote.dev/7PvV4Eo.png)
 
-3. Install `requirements.txt` with the command `pip install -r requirements.txt`
+4. Install `requirements.txt` with the command `pip install -r requirements.txt`
    - If you are on Windows, you might need to run command prompt as Administrator)
    - If you do already have it installed, you might have forgotten to put it in PATH Reinstall it and make sure to check the box that says "Add Python to PATH" And Or PIP
 
@@ -34,11 +36,9 @@ This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com
 
 ## ^^ all of the text above is from https://github.com/AlexFlipnote projects and is a good standard to have when giving python scripts to others.
 
-4. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease.
+5. Once you have installed requirements.txt, move all the stuff from inside "Move Files in This to a Preferred Space" to a folder that you can remember and find with ease. 
 
-5. Then, in rotate_screenshot_splash.py, change any references to a folder or location to the appropriate spaces for your system. 
-
-6. Once checking all of youre locations press the start_Basic.bat.
+6. press the start_Basic.bat.
 
 # Makes the script Automatic OPTIONAL:
 
@@ -65,8 +65,8 @@ Big thanks to all of the people who worked on this project!
 
 
 # To the future
-- I really want to look into replacing the images in the launcher with screenshot pictures instead but i have no idea how to do it just yet
+- I'd like to replace the photos in the launcher with screenshots as well, but I'm not sure how to achieve it just yet.
 
-- possibly making it so you can just choose youre directory once and not have to have the locations hardcoded in per system
+- allowing you to select your directory only once rather than having the locations hardcoded into each system [ACHIEVED AS OF 10/03/23]
 
-- MASSIVE MAYBE this project was orginally made for Star Citizen's [EAC](https://www.easy.ac/) but their is a chance that it gets renamed and starts being made to work for all [EAC](https://www.easy.ac/) games if possible
+- There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
