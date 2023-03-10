@@ -36,16 +36,11 @@ Please try to reproduce the issue with as few other mods as possible. Then check
 
 ***If applicable, add screenshots and/or videos to help explain your problem.***
 
-## Logs or/and crash reports
-
-***Please use https://mclo.gs/ to upload your logs and crash reports***
-
 ## Versions
 
-- Modern Warfare Cubed: [e.g. MWC-0.1-Dev-1] 
-- Forge: [e.g. 1.12.2 - 14.23.5.2860]
-- Java: [e.g. JDK 8 - 352-b08]
-- Java JVM: [e.g. Hotspot]
+- Star Citizen: [e.g. 3.18] 
+- Delta Patcher: [e.g. 1.5.5]
+- Python: [e.g. 3.10.2]
 
 ## Specification:
 
