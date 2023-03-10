@@ -51,9 +51,23 @@ SPLASH_FOLDER = config["splash_folder"]
 # if the user has not put in the location of the screenshots folder and the splash folder into command prompt and the config.json file
 if SCREENSHOTS_FOLDER == "" or SPLASH_FOLDER == "":
     # ask the user to put in the location of the screenshots folder
-    SCREENSHOTS_FOLDER = input("Please enter the location of the screenshots folder: ")
+    SCREENSHOTS_FOLDER = input("Please enter the location of the Screenshots folder: ")
     # ask the user to put in the location of the splash folder
-    SPLASH_FOLDER = input("Please enter the location of the splash folder: ")
+    SPLASH_FOLDER = input("Please enter the location of the EasyAntiCheat folder: ")
+    # save the location of the screenshots folder and the splash folder into the config.json file
+    with open("config.json", "w") as f:
+        config = {
+            "screenshots_folder": SCREENSHOTS_FOLDER,
+            "splash_folder": SPLASH_FOLDER
+        }
+        json.dump(config, f, indent=4)
+
+# if location in config.json file is not correct ask them to refill the config.json file
+if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
+    # ask the user to put in the location of the screenshots folder
+    SCREENSHOTS_FOLDER = input("Please enter the location of the Screenshots folder: ")
+    # ask the user to put in the location of the splash folder
+    SPLASH_FOLDER = input("Please enter the location of the EasyAntiCheat folder: ")
     # save the location of the screenshots folder and the splash folder into the config.json file
     with open("config.json", "w") as f:
         config = {
