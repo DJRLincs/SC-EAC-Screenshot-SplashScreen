@@ -23,53 +23,44 @@ except ImportError:
     )
 
 
-# # try except block is useful for when you'd like to capture errors
-# try:
-#     with open("config.json") as f:
-#         config = json.load(f)
-# except (filenotfounderror, json.jsondecodeerror):
-#     # you can in theory also do "except:" or "except exception:", but it is not recommended
-#     # unless you want to suppress all errors
-#     config = {}
+# create a config.json file if it doesn't exist and make it so that the file locations are saved into this config.json file
 
+# # this is used to save the location for the next time you run the script 
 
-# while true:
-#     # if no location is stored in "config" the value defaults to none
-#     location = config.get("location", none)
-#     if location:
-#         print(f"\n--- detected location in {fore.green}./config.json{fore.reset} (saved from a previous run). using stored location. ---\n")
-#     else:
-#         # take input from the user if no location is detected
-#         location = input("> ")
+# the user when running the script for the first time can put in the location of the screenshots folder and the splash folder into command prompt and it will be saved into the config.json file and be pulled everytime the script runs
 
-#     # if the location is correct, it will continue the code
-#     if data.get("id", none):
-#         break  # breaks out of the while loop
+# the user can also change the location of the screenshots folder and the splash folder in the config.json file
 
-#     # if the location is incorrect, an error will be printed
-#     # you will then be asked to enter a location again (while loop)
-#     print(f"\nseems like you entered an {fore.red}invalid location{fore.reset}. please enter a valid location (see github repo for help).")
+try:
+    with open("config.json", "r") as f:
+        config = json.load(f)
+except FileNotFoundError:
+    with open("config.json", "w") as f:
+        config = {
+            "screenshots_folder": "",
+            "splash_folder": ""
+        }
+        json.dump(config, f, indent=4)
 
-#     # resets the config so that it doesn't use the previous location again
-#     config.clear()
+# get the location of the screenshots folder from the config.json file
+SCREENSHOTS_FOLDER = config["screenshots_folder"]
 
+# get the location of the splash folder from the config.json file
+SPLASH_FOLDER = config["splash_folder"]
 
-# # this is used to save the location for the next time you run the bot
-# with open("config.json", "w") as f:
-#     # check if 'location' key exists in the config.json file
-#     config["location"] = location
-
-#     # this dumps our working setting to the config.json file
-#     # indent is used to make the file look nice and clean
-#     # if you don't want to indent, you can remove the indent=2 from code
-#     json.dump(config, f, indent=2)
-
-#^^^ Possible Feature to add in the future that wont work for some reason idk why D; ^^^
-
-
-
-
-
+# if the user has not put in the location of the screenshots folder and the splash folder into command prompt and the config.json file
+if SCREENSHOTS_FOLDER == "" or SPLASH_FOLDER == "":
+    # ask the user to put in the location of the screenshots folder
+    SCREENSHOTS_FOLDER = input("Please enter the location of the screenshots folder: ")
+    # ask the user to put in the location of the splash folder
+    SPLASH_FOLDER = input("Please enter the location of the splash folder: ")
+    # save the location of the screenshots folder and the splash folder into the config.json file
+    with open("config.json", "w") as f:
+        config = {
+            "screenshots_folder": SCREENSHOTS_FOLDER,
+            "splash_folder": SPLASH_FOLDER
+        }
+        json.dump(config, f, indent=4)
 
 
 ############################################################################################################
@@ -77,9 +68,9 @@ except ImportError:
 
 # constants
 # the folder where the screenshots are (your path will be different than mine, edit it)
-SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\screenshots"
+#SCREENSHOTS_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\screenshots"
 # the folder where the new splash screen will be (your path will be different than mine, edit it)
-SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries" "\StarCitizen\LIVE\EasyAntiCheat"
+#SPLASH_FOLDER = "E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\EasyAntiCheat"
 
 ##EDIT THIS SECTION TO THE RIGHT LOCATION OF YOUR FILES
 ############################################################################################################
