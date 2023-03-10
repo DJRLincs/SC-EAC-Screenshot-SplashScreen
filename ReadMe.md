@@ -3,7 +3,7 @@
 </p>
 
 # What the hell does this do?
-This script's objective is to substitute screenshots from your Star Citizen screenshots folder for your [EAC](https://www.easy.ac/) loading screen, and to substitute a different screenshot each time the script is executed. Presently, you must alter the script to specify the location of your folders, however this may change in the future.
+This script's objective is to substitute screenshots from your Star Citizen screenshots folder for your [EAC](https://www.easy.ac/) loading screen, and to substitute a different screenshot each time the script is executed.
 
 # History
 This was originally created in 2022 by thorax on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
