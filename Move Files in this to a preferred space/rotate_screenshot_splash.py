@@ -37,8 +37,13 @@ try:
 except FileNotFoundError:
     with open("config.json", "w") as f:
         config = {
+            "Rotate_Screenshot_Splash": True,
             "screenshots_folder": "",
-            "splash_folder": ""
+            "splash_folder": "",
+            "Note": "This is just a space in the config file",
+            "edit_launcher_carousel": False,
+            "Launcher_Folder": "",
+            "image_folder": ""
         }
         json.dump(config, f, indent=4)
 
@@ -57,8 +62,13 @@ if SCREENSHOTS_FOLDER == "" or SPLASH_FOLDER == "":
     # save the location of the screenshots folder and the splash folder into the config.json file
     with open("config.json", "w") as f:
         config = {
+            "Rotate_Screenshot_Splash": True,
             "screenshots_folder": SCREENSHOTS_FOLDER,
-            "splash_folder": SPLASH_FOLDER
+            "splash_folder": SPLASH_FOLDER,
+            "Note": "This is just a space in the config file",
+            "edit_launcher_carousel": False,
+            "Launcher_Folder": "",
+            "image_folder": ""
         }
         json.dump(config, f, indent=4)
         print("Fun fact: you can also change the location of the screenshots and splashscreen folder in the config.json file \n")
@@ -72,8 +82,13 @@ if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
     # save the location of the screenshots folder and the splash folder into the config.json file
     with open("config.json", "w") as f:
         config = {
+            "Rotate_Screenshot_Splash": True,
             "screenshots_folder": SCREENSHOTS_FOLDER,
-            "splash_folder": SPLASH_FOLDER
+            "splash_folder": SPLASH_FOLDER,
+            "Note": "This is just a space in the config file",
+            "edit_launcher_carousel": False,
+            "Launcher_Folder": "",
+            "image_folder": ""
         }
         json.dump(config, f, indent=4)
     print("The config.json file has been updated with the new locations \n")

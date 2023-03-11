@@ -3,14 +3,77 @@ import subprocess
 from pathlib import Path
 import re
 import shutil
+import json
 
 # You need to have npm installed for this to work https://phoenixnap.com/kb/install-node-js-npm-on-windows
 # This file needs to be ran as administrator as the rsi launcher is installed in a protected folder
 
+# will add to the config.json file if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
+
+# # this is used to save the location for the next time you run the script 
+
+# the user when running the script for the first time can put in the location of the Launcher folder and the Images folder into command prompt and it will be saved into the config.json file and be pulled everytime the script runs
+
+# the user can also change the location of tthe Launcher folder and the Images folder in the config.json file
+
+
+try:
+    with open("config.json", "r") as f:
+        config = json.load(f)
+except FileNotFoundError:
+    with open("config.json", "w") as f:
+        config = {
+            "Rotate_Screenshot_Splash": True,
+            "screenshots_folder": "",
+            "splash_folder": "",
+            "Note": "This is just a space in the config file \n",
+            "edit_launcher_carousel": true,
+            "Launcher_Folder": "",
+            "image_folder": ""
+        }
+        json.dump(config, f, indent=4)
+
+# get the location of the Launcher folder from the config.json file
+LAUNCHER_FOLDER = config["Launcher_Folder"]
+
+# get the location of the Images folder from the config.json file
+IMAGE_FOLDER = config["image_folder"]
+
+# if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
+if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "":
+    # if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
+    if LAUNCHER_FOLDER == "":
+        # get the location of the Launcher folder from the user
+        LAUNCHER_FOLDER = input("Please enter the location of the Launcher folder: \n")
+        # save the location of the Launcher folder into the config.json file
+        config["Launcher_Folder"] = LAUNCHER_FOLDER
+        with open("config.json", "w") as f:
+            json.dump(config, f, indent=4)
+    if IMAGE_FOLDER == "":
+        # get the location of the Images folder from the user
+        IMAGE_FOLDER = input("Please enter the location of the Images folder: \n")
+        # save the location of the Images folder into the config.json file
+        config["image_folder"] = IMAGE_FOLDER
+        with open("config.json", "w") as f:
+            json.dump(config, f, indent=4)
+
+if not os.path.exists(LAUNCHER_FOLDER) or not os.path.exists(IMAGE_FOLDER):
+    LAUNCHER_FOLDER = input("Please enter the location of the Launcher folder: \n")
+    IMAGE_FOLDER = input("Please enter the location of the Images folder: \n")
+
+    with open("config.json", "w") as f:
+        config["Launcher_Folder"] = LAUNCHER_FOLDER
+        config["image_folder"] = IMAGE_FOLDER
+        json.dump(config, f, indent=4)
+
+# the location of the Launcher folder
+launcher_path = Path(LAUNCHER_FOLDER)
+# the location of the Images folder
+image_folder = Path(IMAGE_FOLDER)
 
 # your launcher path may look something like this C:\Program Files\Roberts Space Industries\RSI Launcher\resources
-launcher_path = Path(r"Path to launcher resources folder")
-image_folder = Path(r"Path to a folder of images (PNG JPG OR GIF)")
+#launcher_path = Path(r"E:\StarCitizen\RSI Launcher\resources")
+#image_folder = Path(r"E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\screenshots")
 
 
 #firstly we make a copy of the launcher file just to be safe and incase we want to revert back
@@ -22,7 +85,7 @@ npx_command_extract = ["npx", "asar", "extract", "app.asar", "unpacked"]
 # npx_command_extract = ["echo", "Hello World!"]  # for testing subprocess
 
 # Replace this with the path to your RSI Launcher
-path = Path(r"C:\Program Files\Roberts Space Industries\RSI Launcher\resources")
+path = Path(r"E:\StarCitizen\RSI Launcher\resources")
 
 # Check if the path exists
 if not path.exists():

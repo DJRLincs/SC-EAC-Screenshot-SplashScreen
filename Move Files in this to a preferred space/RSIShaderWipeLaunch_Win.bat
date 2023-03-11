@@ -23,7 +23,26 @@ IF %ERRORLEVEL% NEQ 0 (
   exit
 )
 
+where node
+IF %ERRORLEVEL% NEQ 0 (
+  cls
+  echo You might need to install Node.js first!
+  echo https://nodejs.org/en/download/
+  echo.
+  echo If you do already have it installed, you might need to update it
+  echo.
+
+  :: Pause and Exit is used to make sure that you are able to
+  :: read the message before the window closes
+  pause
+  exit
+)
+
 "C:\Python311\python.exe" "E:\StarCitizen\rotate_screenshot_splash.py"
 :: DOUBLE CHECK THE LOCATIONS OF THE FILES
+
+"C:\Python311\python.exe" "E:\StarCitizen\edit_launcher_carousel.py"
+:: DOUBLE CHECK THE LOCATIONS OF THE FILES
+
 Start ""  "E:\StarCitizen\RSI Launcher\RSI Launcher.exe"
 exit
