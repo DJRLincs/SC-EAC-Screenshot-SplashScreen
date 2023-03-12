@@ -27,7 +27,7 @@ except FileNotFoundError:
             "screenshots_folder": "",
             "splash_folder": "",
             "Note": "This is just a space in the config file \n",
-            "edit_launcher_carousel": true,
+            "edit_launcher_carousel": True,
             "Launcher_Folder": "",
             "image_folder": ""
         }
@@ -84,17 +84,15 @@ shutil.copyfile(launcher_path / "app.asar", launcher_path / "original_app.asar")
 npx_command_extract = ["npx", "asar", "extract", "app.asar", "unpacked"]
 # npx_command_extract = ["echo", "Hello World!"]  # for testing subprocess
 
-# Replace this with the path to your RSI Launcher
-path = Path(LAUNCHER_FOLDER)
 
 # Check if the path exists
-if not path.exists():
-    raise FileNotFoundError(f"Could not find file: {path}")
+if not launcher_path.exists():
+    raise FileNotFoundError(f"Could not find file: {launcher_path}")
 
 # check if the unpacked folder exists and skip to the next step if it does
-if not (path / "unpacked").exists():
+if not (launcher_path / "unpacked").exists():
     # Run the command
-    process = subprocess.Popen(npx_command_extract, cwd=path, shell=True)
+    process = subprocess.Popen(npx_command_extract, cwd=launcher_path, shell=True)
 
     # Check the return code of the command
     if process.wait() == 0:
@@ -107,16 +105,16 @@ if not (path / "unpacked").exists():
 
 
 #path to the javascript file
-new_path = path / "unpacked" / "app" / "cig-launcher.js"
-launcher_images = path / "unpacked" / "app" /"assets"/ "images"
+path_to_js = launcher_path / "unpacked" / "app" / "cig-launcher.js"
+launcher_images = launcher_path / "unpacked" / "app" /"assets"/ "images"
 
 #open the file and read it
-with open(new_path, "r") as f:
+with open(path_to_js, "r") as f:
     data = f.read()
 
 #rename the original javascript file, so we have it just incase
-if not (path / "unpacked" / "app"/"original_cig-launcher.js").exists():
-    os.rename(new_path, path / "unpacked" / "app"/"original_cig-launcher.js")
+if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists():
+    os.rename(path_to_js, launcher_path / "unpacked" / "app" / "original_cig-launcher.js")
 
 # we are looking for this line carousel:{delay:25e3,images:[ this is where the list of image names starts
 pattern = re.compile(r'carousel:{delay:25e3,images:\[([^]]*)\]')
@@ -136,26 +134,22 @@ new_data = data.replace(current_img_list, replacement_string)
 
 
 # save the original images
-if not (path / "unpacked" / "app"/"assets"/"original_images").exists():
-    shutil.copytree(launcher_images, path / "unpacked" / "app"/"assets"/"original_images")
+if not (launcher_path / "unpacked" / "app" / "assets" / "original_images").exists():
+    shutil.copytree(launcher_images, launcher_path / "unpacked" / "app" / "assets" / "original_images")
 #remove the original images
 shutil.rmtree(launcher_images)
 #finally lets copy the new images to the correct folder
 shutil.copytree(image_folder, launcher_images)
 
-with open(new_path, "w") as f:
+with open(path_to_js, "w") as f:
     f.write(new_data)
 
-#if you want to delete the unpacked folder after you are done remove the "#" from the line below
-# shutil.rmtree(path / "unpacked")
 
 #The command to unpack the launcher file
 npx_command_pack = ["npx", "asar", "pack","unpacked", "app.asar"]
 # npx_command_extract = ["echo", "Hello World!"]  # for testing subprocess
 
-# Replace this with the path to your RSI Launcher
-
-process = subprocess.Popen(npx_command_pack, cwd=path, shell=True)
+process = subprocess.Popen(npx_command_pack, cwd=launcher_path, shell=True)
 
 # Check the return code of the command
 if process.wait() == 0:
@@ -165,3 +159,6 @@ else:
 
     # Print the output of the command for debugging
     print(process)
+
+# if you want to delete the unpacked folder after you are done remove the "#" from the line below
+# shutil.rmtree(path / "unpacked")
