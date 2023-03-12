@@ -27,9 +27,9 @@ IF %ERRORLEVEL% NEQ 0 (
   
 
   winget install -e --id=Python.Python.3.10 -v "3.10.2" --scope=machine
-  echo might need to restart the machine for the commands to be recongnized
+  echo might need to restart the machine for the commands to be recognized
   echo.
-  echo Python is being downloaded from here pleaes use this version or higher
+  echo Python is being downloaded from here please use this version or higher
   echo https://www.python.org/downloads/release/python-3102/
   echo.
   echo please make sure to check the box that says "Add Python to PATH" and PIP
