@@ -1,10 +1,11 @@
-@echo off
-title Basic EAC Screenshot Replace Splashscreen
+title RSI Launcher
 
 :: This script will run the python script that will run the program
 :: It will also check if python is installed and if it is in PATH
 :: If it is not, it will tell you to install it and put it in PATH
 :: If you already have it installed, you might have forgotten to put it in PATH
+
+
 
 where python
 IF %ERRORLEVEL% NEQ 0 (
@@ -37,7 +38,12 @@ IF %ERRORLEVEL% NEQ 0 (
   exit
 )
 
-python edit_launcher_carousel.py
 
-pause
+"C:\Python311\python.exe" "E:\StarCitizen\rotate_screenshot_splash.py"
+:: DOUBLE CHECK THE LOCATIONS OF THE FILES
+
+"C:\Python311\python.exe" "E:\StarCitizen\edit_launcher_carousel.py"
+:: DOUBLE CHECK THE LOCATIONS OF THE FILES
+
+Start ""  "E:\StarCitizen\RSI Launcher\RSI Launcher.exe"
 exit
