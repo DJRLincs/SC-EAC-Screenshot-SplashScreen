@@ -31,21 +31,44 @@ except ImportError:
 
 # the user can also change the location of the screenshots folder and the splash folder in the config.json file
 
-try:
-    with open("config.json", "r") as f:
-        config = json.load(f)
-except FileNotFoundError:
+
+## The old config code so if mine doesnt work we can go back to this
+# try:
+#     with open("config.json", "r") as f:
+#         config = json.load(f)
+# except FileNotFoundError:
+#     with open("config.json", "w") as f:
+#         config = {
+#             "Rotate_Screenshot_Splash": True,
+#             "screenshots_folder": "",
+#             "splash_folder": "",
+#             "Note": "This is just a space in the config file",
+#             "edit_launcher_carousel": False,
+#             "Launcher_Folder": "",
+#             "image_folder": ""
+#         }
+#         json.dump(config, f, indent=4)
+
+if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
+    try:
+        with open("config.json", "r") as f:
+            config = json.load(f)
+    except json.decoder.JSONDecodeError:
+        print("The config.json file is improperly formatted.")
+        sys.exit()
+else:
     with open("config.json", "w") as f:
         config = {
             "Rotate_Screenshot_Splash": True,
             "screenshots_folder": "",
             "splash_folder": "",
-            "Note": "This is just a space in the config file",
-            "edit_launcher_carousel": False,
+            "Note": "This is just a space in the config file \n",
+            "edit_launcher_carousel": True,
             "Launcher_Folder": "",
             "image_folder": ""
         }
         json.dump(config, f, indent=4)
+
 
 # get the location of the screenshots folder from the config.json file
 SCREENSHOTS_FOLDER = config["screenshots_folder"]

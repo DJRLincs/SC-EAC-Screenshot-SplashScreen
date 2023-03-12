@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 from pathlib import Path
 import re
 import shutil
@@ -16,11 +17,14 @@ import json
 
 # the user can also change the location of tthe Launcher folder and the Images folder in the config.json file
 
-
-try:
-    with open("config.json", "r") as f:
-        config = json.load(f)
-except FileNotFoundError:
+if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
+    try:
+        with open("config.json", "r") as f:
+            config = json.load(f)
+    except json.decoder.JSONDecodeError:
+        print("The config.json file is improperly formatted.")
+        sys.exit()
+else:
     with open("config.json", "w") as f:
         config = {
             "Rotate_Screenshot_Splash": True,
