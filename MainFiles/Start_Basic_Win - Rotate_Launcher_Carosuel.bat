@@ -1,3 +1,6 @@
+et "params=%*"
+cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
+
 @echo off
 title EAC Screenshot Replace Launcher Carousel
 where python3
@@ -44,12 +47,6 @@ IF %ERRORLEVEL% NEQ 0 (
   echo and continue to run the script and fail
   echo.
   CHOICE /C YNC /M "Press Y for Yes, N for No."
-
-  echo You might need to install Node.js first!
-  echo https://nodejs.org/en/download/
-  echo.
-  echo If you do already have it installed, you might need to update it
-  echo.
 
   :: Pause and Exit is used to make sure that you are able to
   :: read the message before the window closes
