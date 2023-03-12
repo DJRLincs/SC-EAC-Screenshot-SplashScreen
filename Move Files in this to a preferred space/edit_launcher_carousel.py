@@ -85,7 +85,7 @@ npx_command_extract = ["npx", "asar", "extract", "app.asar", "unpacked"]
 # npx_command_extract = ["echo", "Hello World!"]  # for testing subprocess
 
 # Replace this with the path to your RSI Launcher
-path = Path(r"E:\StarCitizen\RSI Launcher\resources")
+path = Path(LAUNCHER_FOLDER)
 
 # Check if the path exists
 if not path.exists():
