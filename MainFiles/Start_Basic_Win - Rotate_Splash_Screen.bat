@@ -13,7 +13,7 @@ echo.
 SET /P AREYOUSURE=Are you sure you wish to run the script (Y/N)?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
-where python3
+py -3 --version
 IF %ERRORLEVEL% NEQ 0 (
   cls
   echo Python is not installed or not in PATH! Winget can install it for you and is about to run if you put Y if N it 
@@ -39,7 +39,7 @@ IF %ERRORLEVEL% NEQ 0 (
 pip install --upgrade pip
 pip install Pillow
 
-python rotate_screenshot_splash.py
+py rotate_screenshot_splash.py
 
 pause
 exit

@@ -1,10 +1,13 @@
 et "params=%*"
 cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
+:: this bit is very much a test for admin perms when you replace the carosuel it will need to be able to write in the folder
 
 @echo off
 title EAC Screenshot Replace Launcher Carousel
-where python3
+
+py -3 --version
 where node
+
 echo.
 echo.
 echo This script will run the a check for Python and Node.js and install them if they are not installed and then run the 
@@ -17,7 +20,7 @@ echo.
 SET /P AREYOUSURE=Are you sure you wish to run the script (Y/N)?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
-where python3
+py -3 --version
 IF %ERRORLEVEL% NEQ 0 (
   cls
   echo Python is not installed or not in PATH! Winget can install it for you and is about to run if you put Y if N it 
@@ -58,7 +61,7 @@ IF %ERRORLEVEL% NEQ 0 (
   pause
 )
 
-python edit_launcher_carousel.py
+py edit_launcher_carousel.py
 
 pause
 exit
