@@ -1,6 +1,7 @@
 @echo off
 title EAC Screenshot Replace Splashscreen
-where python3
+py -3 --version
+
 echo.
 echo.
 echo This script will run the a check for Python and Node.js and install them if they are not installed and then run the 
