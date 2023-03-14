@@ -43,7 +43,7 @@ except ImportError:
 #             "screenshots_folder": "",
 #             "splash_folder": "",
 #             "Note": "This is just a space in the config file",
-#             "edit_launcher_carousel": False,
+#             "edit_launcher_Carousel": False,
 #             "Launcher_Folder": "",
 #             "image_folder": ""
 #         }
