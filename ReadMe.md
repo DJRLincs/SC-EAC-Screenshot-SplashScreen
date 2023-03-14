@@ -63,6 +63,9 @@ Big thanks to all of the people who worked on this project!
   <img src="https://contrib.rocks/image?repo=DavidRoseLincs/SC-EAC-Screenshot-SplashScreen" />
 </a>
 
+# Want to help with the project?
+We are always seeking intelligent people who are familiar with Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/). The only other two requirements are [Visual Studio Code](https://code.visualstudio.com/download) and [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens). Fortunately, when you run the script, two of the requirements are automatically installed for you. Immediately afterward, you may utilise it to study the repository by cloning this current one inside Visual Studio Code. Feel free to explore, pick up new skills, and come up with new ideas. Then, submit a pull request to the repository. I'll review it, and every contribution you make will add you to the list of contributors above.
+
 
 # To the future
 - I'd like to replace the carousel (Wallpaper's) in RSI launcher with screenshots as well, but I'm not sure how to achieve it just yet. (ACHIEVED AS OF 14/03/23)
@@ -70,6 +73,3 @@ Big thanks to all of the people who worked on this project!
 - allowing you to select your directory only once rather than having the locations hardcoded into each system [ACHIEVED AS OF 10/03/23]
 
 - There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
-
-# Want to help with the project?
-We are always seeking intelligent people who are familiar with Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/). The only other two requirements are [Visual Studio Code](https://code.visualstudio.com/download) and [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens). Fortunately, when you run the script, two of the requirements are automatically installed for you. Immediately afterward, you may utilise it to study the repository by cloning this current one inside Visual Studio Code. Feel free to explore, pick up new skills, and come up with new ideas. Then, submit a pull request to the repository. I'll review it, and every contribution you make will add you to the list of contributors above.
