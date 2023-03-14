@@ -73,4 +73,4 @@ Big thanks to all of the people who worked on this project!
 
 # Want to help with the project?
 
-we are always looking for bright minded individuals who understand Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/) luckily when you run the script two of the requirements are installed for you automatically the only other two are [Visual Studio Code]() and [Gitlens](vscode:extension/eamodio.gitlens)
+we are always looking for bright minded individuals who understand Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/) luckily when you run the script two of the requirements are installed for you automatically the only other two are [Visual Studio Code]() and [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
