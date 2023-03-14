@@ -12,7 +12,7 @@
   </a>
   
   <a href="https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/commits/master">
-    <img src="https://img.shields.io/github/last-commit/DJRLincs/SC-EAC-Screenshot-SplashScreenlogo=GitHub&style=for-the-badge">
+    <img src="https://img.shields.io/github/last-commit/DJRLincs/SC-EAC-Screenshot-SplashScreen?logo=GitHub&style=for-the-badge">
   </a>
   
   <a href="https://discord.gg/armco">
