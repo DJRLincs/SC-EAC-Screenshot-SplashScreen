@@ -5,8 +5,9 @@ cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) &&
 :: this bit is very much a test for admin perms when you replace the Carousel it will need to be able to write in the folder
 
 echo.
-echo Requesting admin Permission for the bat file is very much a test and hope function. I hope to not need to keep it, but it might be a required thing for the project.
-echo annoyingly, it also breaks No as an option for choosing to use the script, so if you wish to not run the script, please just close the program.
+echo Requesting admin Permission for the bat file is very much a test and hope function. I hope to not need to keep it, 
+echo but it might be a required thing for the project. annoyingly, it also breaks No as an option for choosing to use the script, 
+echo so if you wish to not run the script, please just close the program.
 echo.
 
 
@@ -24,10 +25,9 @@ where node
 
 echo.
 echo.
-echo This script will run the a check for Python and Node.js and install them if they are not installed and then run the 
-echo script THIS IS NOT AUTOMATIC and is only a single run if you wish to automate it whenever you run the launcher 
-echo please look at the github readme again and look into the optional choices
-echo RSI_Launcher_Win.bat and RSIShaderWipeLaunch_Win.bat
+echo This script will run a check for Python and Node.js, install them if they are not installed, and then run the script.
+echo THIS IS NOT AUTOMATIC and is only a single run. If you wish to automate it whenever you run the launcher, please look 
+echo at the github readme again and look into the optional choices RSI_Launcher_Win.bat and RSIShaderWipeLaunch_Win.bat.
 echo.
 echo.
 :PROMPT

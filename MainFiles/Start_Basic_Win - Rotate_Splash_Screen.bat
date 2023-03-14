@@ -6,10 +6,9 @@ py -3 --version
 
 echo.
 echo.
-echo This script will run the a check for Python and Node.js and install them if they are not installed and then run the 
-echo script THIS IS NOT AUTOMATIC and is only a single run if you wish to automate it whenever you run the launcher 
-echo please look at the github readme again and look into the optional choices
-echo RSI_Launcher_Win.bat and RSIShaderWipeLaunch_Win.bat
+echo This script will run a check for Python, install it if its isnt installed, and then run the script.
+echo THIS IS NOT AUTOMATIC and is only a single run. If you wish to automate it whenever you run the launcher, please look 
+echo at the github readme again and look into the optional choices RSI_Launcher_Win.bat and RSIShaderWipeLaunch_Win.bat.
 echo.
 echo.
 :PROMPT
