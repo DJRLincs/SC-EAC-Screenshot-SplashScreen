@@ -24,7 +24,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
 
-3. Download and install [Node.js] (https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the script automatically)
+3. Download and install [Node.js](https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the script automatically)
 
 4. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the script automatically)
 
