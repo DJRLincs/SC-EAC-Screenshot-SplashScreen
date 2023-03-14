@@ -80,8 +80,8 @@ Hope you enjoy it :I
 # Contributors
 Big thanks to all of the people who worked on this project!
 
-<a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DavidRoseLincs/SC-EAC-Screenshot-SplashScreen" />
+<a href="https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DJRLincs/SC-EAC-Screenshot-SplashScreen" />
 </a>
 
 # Want to help with the project?
