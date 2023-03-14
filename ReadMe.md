@@ -71,3 +71,8 @@ Big thanks to all of the people who worked on this project!
 
 - There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
 
+<<<<<<< HEAD
+=======
+
+Chax was here
+>>>>>>> a5f38f13922efe93dca3cda7524c7d1b39c1de46
