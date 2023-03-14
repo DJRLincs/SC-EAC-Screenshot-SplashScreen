@@ -15,9 +15,7 @@
     <img src="https://img.shields.io/github/last-commit/DJRLincs/SC-EAC-Screenshot-SplashScreen?logo=GitHub&style=for-the-badge">
   </a>
   
-  <a href="https://discord.gg/armco">
-    <img src="https://img.shields.io/discord/222052888531173386?label=Discord&logo=discord&style=for-the-badge">
-  </a>
+  
   
 </p>
 
