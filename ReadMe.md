@@ -20,18 +20,21 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 # How to use ✨
 1. Download the [Project](https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/archive/refs/heads/master.zip) into a zip folder.
 
-2. Download and install [Python](https://www.python.org/downloads) if you haven't already. (It can be installed for you with the script automatically)
+2. Download and install [Python](https://www.python.org/downloads/release/python-3102/) if you haven't already. (It can be installed for you with the script automatically)
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
 
-3. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the script automatically)
+3. Download and install [Node.js] (https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the script automatically)
 
+4. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the script automatically)
 
-4. Extract the zip folder into a location of your choice. (I recommend your desktop)
+5. Extract the zip folder into a location of your choice. (I recommend your desktop)
 
-5. Open the folder and run the "Start_Basic_Win - Rotate_Splash_Screen.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
+6. Open the folder and run the "Start_Basic_Win - Rotate_Splash_Screen.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
 
-6. Follow the prompts and enter the required information. (You will need to enter your Star Citizen screenshots folder location, and your Star Citizen EasyAntiCheat Folder and or your Star Citizen Launcher folder resources folder location)
+7. Follow the prompts and enter the required information. (You will need to enter your Star Citizen screenshots folder location, and your Star Citizen EasyAntiCheat Folder and or your Star Citizen Launcher folder resources folder location)
+
+8. Once you had run that script run Start_Basic_Win - Rotate_Launcher_Carosuel.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
 
 
 
