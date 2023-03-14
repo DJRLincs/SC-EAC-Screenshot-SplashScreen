@@ -70,5 +70,5 @@ Big thanks to all of the people who worked on this project!
 - allowing you to select your directory only once rather than having the locations hardcoded into each system [ACHIEVED AS OF 10/03/23]
 
 - There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
-I hate david
+
 
