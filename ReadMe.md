@@ -71,4 +71,6 @@ Big thanks to all of the people who worked on this project!
 
 - There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
 
+# Want to help with the project?
 
+we are always looking for bright minded individuals who understand Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/) luckily when you run the script two of the requirements are installed for you automatically the only other two are [Visual Studio Code]() and [Gitlens](vscode:extension/eamodio.gitlens)
