@@ -10,10 +10,6 @@ echo but it might be a required thing for the project. annoyingly, it also break
 echo so if you wish to not run the script, please just close the program.
 echo.
 
-
-
-
-
 @echo off
 title RSI Launcher Editor - Rotate Launcher Carousel
 echo.
