@@ -16,7 +16,7 @@
   </a>
   
   <a href="https://discord.gg/armco">
-    <img src="https://img.shields.io/discord/801852948854079489?label=Discord&logo=discord&style=for-the-badge">
+    <img src="https://img.shields.io/discord/222052888531173386?label=Discord&logo=discord&style=for-the-badge">
   </a>
   
 </p>
