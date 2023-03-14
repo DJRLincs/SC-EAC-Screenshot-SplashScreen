@@ -2,6 +2,27 @@
   <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/737301647440740453/1077544580737662976/banner.png" width="750px">
 </p>
 
+<h1 align="center">RSI Launcher Editor</h1>
+
+<h5 align="center">i am meant to have a message here i havent decided on what to put so youre gonna have to manage XD</h5>
+
+<p align="center">
+  <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen//releases">
+    <img src="https://img.shields.io/github/v/release/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/?label=Release&logo=GitHub&sort=semver&style=for-the-badge">
+  </a>
+  
+  <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/commits/master">
+    <img src="https://img.shields.io/github/last-commit/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/?logo=GitHub&style=for-the-badge">
+  </a>
+  
+  <a href="https://discord.gg/armco">
+    <img src="https://img.shields.io/discord/801852948854079489?label=Discord&logo=discord&style=for-the-badge">
+  </a>
+  
+</p>
+
+<br>
+
 # What the hell does this do?
 The purpose of this script is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder or another location, and to replace a different screenshot each time the script is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
 
