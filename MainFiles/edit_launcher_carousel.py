@@ -17,6 +17,8 @@ import json
 
 # the user can also change the location of tthe Launcher folder and the Images folder in the config.json file
 
+delay_time = 1  # the delay time in seconds, currently no support for floats
+
 if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
     try:
         with open("config.json", "r") as f:
@@ -122,8 +124,13 @@ if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists(
 
 # we are looking for this line carousel:{delay:25e3,images:[ this is where the list of image names starts
 pattern = re.compile(r'carousel:{delay:25e3,images:\[([^]]*)\]')
+delay_pattern = re.compile(r'delay:\d+e\d*,')
+
+test_pattern = re.compile(r'carousel:{delay:\d+\.?\d*,images:\[([^]]*)\]')
 # the list of images currently listed in the javascript file, we are going to replace these with our own
 current_img_list = pattern.search(data).group(1)
+current_delay = delay_pattern.search(data).group(0)
+
 
 
 #this is the list of images we are going to use
@@ -134,7 +141,7 @@ for item in image_folder.iterdir():
 #join the list of images into a string
 replacement_string = ",".join(new_img_list)
 # replace the old list with the new one
-new_data = data.replace(current_img_list, replacement_string)
+new_data = data.replace(current_img_list, replacement_string).replace(current_delay, f"delay:{delay_time}e3,")
 
 
 # save the original images
