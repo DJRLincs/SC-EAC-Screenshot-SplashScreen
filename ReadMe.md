@@ -32,9 +32,9 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 # Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE SCRIPT AS OF 14/03/23)
 - Python 3.8 or above (https://www.python.org/downloads)
   - Recommended version [3.10.2](https://www.python.org/downloads/release/python-3102/)
-- Node.js Any Version ()
+- Node.js Any Version (https://nodejs.org/en/download/)
   - this is what does the compiling for the launcher wallpaper's [Node.js](https://nodejs.org/en/download/)
-- Pillow .
+- [Pillow](https://pillow.readthedocs.io/en/stable/installation.html)
   - Installs when the script is ran that requires it
 - Patience
   - Take youre time if you need help just ask trust me
