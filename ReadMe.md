@@ -8,11 +8,11 @@
 
 <p align="center">
   <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen//releases">
-    <img src="https://img.shields.io/github/v/release/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/?label=Release&logo=GitHub&sort=semver&style=for-the-badge">
+    <img src="https://img.shields.io/github/v/release/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen?label=Release&logo=GitHub&sort=semver&style=for-the-badge">
   </a>
   
   <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/commits/master">
-    <img src="https://img.shields.io/github/last-commit/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/?logo=GitHub&style=for-the-badge">
+    <img src="https://img.shields.io/github/last-commit/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen?logo=GitHub&style=for-the-badge">
   </a>
   
   <a href="https://discord.gg/armco">
