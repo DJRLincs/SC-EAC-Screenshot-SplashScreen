@@ -48,7 +48,7 @@ if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "":
     # if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
     if LAUNCHER_FOLDER == "":
         # get the location of the Launcher folder from the user
-        LAUNCHER_FOLDER = input("Please enter the location of the Launcher folder: \n")
+        LAUNCHER_FOLDER = input("Please enter the location of the Launcher resources folder: \n")
         # save the location of the Launcher folder into the config.json file
         config["Launcher_Folder"] = LAUNCHER_FOLDER
         with open("config.json", "w") as f:
@@ -62,7 +62,7 @@ if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "":
             json.dump(config, f, indent=4)
 
 if not os.path.exists(LAUNCHER_FOLDER) or not os.path.exists(IMAGE_FOLDER):
-    LAUNCHER_FOLDER = input("Please enter the location of the Launcher folder: \n")
+    LAUNCHER_FOLDER = input("Please enter the location of the Launcher resources folder: \n")
     IMAGE_FOLDER = input("Please enter the location of the Images folder: \n")
 
     with open("config.json", "w") as f:
@@ -159,7 +159,7 @@ process = subprocess.Popen(npx_command_pack, cwd=launcher_path, shell=True)
 if process.wait() == 0:
     print('npm command succeeded.')
 else:
-    print('npm command failed. New images have not been applied to the launcher.')
+    print('npm command failed. New images have not been applied to the launcher resources folder.')
 
     # Print the output of the command for debugging
     print(process)
