@@ -1,5 +1,7 @@
 @echo off
-title EAC Screenshot Replace Splashscreen
+title RSI Launcher Editor - Rotate EAC Splash Screen
+echo.
+Echo Checking for Python:
 py -3 --version
 
 echo.

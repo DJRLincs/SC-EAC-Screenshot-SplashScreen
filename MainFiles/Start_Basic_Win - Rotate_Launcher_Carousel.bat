@@ -3,9 +3,11 @@ cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) &&
 :: this bit is very much a test for admin perms when you replace the Carousel it will need to be able to write in the folder
 
 @echo off
-title EAC Screenshot Replace Launcher Carousel
-
+title RSI Launcher Editor - Rotate Launcher Carousel
+echo Checking for Python:
 py -3 --version
+echo.
+echo Checking for Node.js:
 where node
 
 echo.
