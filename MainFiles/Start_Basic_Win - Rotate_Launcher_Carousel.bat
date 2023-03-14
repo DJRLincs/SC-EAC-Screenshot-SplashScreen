@@ -1,9 +1,21 @@
+@echo off
+title RSI Launcher Editor - Rotate Launcher Carousel
 et "params=%*"
 cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
 :: this bit is very much a test for admin perms when you replace the Carousel it will need to be able to write in the folder
 
+echo.
+echo Requesting admin Permission for the bat file is very much a test and hope function. I hope to not need to keep it, but it might be a required thing for the project.
+echo annoyingly, it also breaks No as an option for choosing to use the script, so if you wish to not run the script, please just close the program.
+echo.
+
+
+
+
+
 @echo off
 title RSI Launcher Editor - Rotate Launcher Carousel
+echo.
 echo Checking for Python:
 py -3 --version
 echo.
