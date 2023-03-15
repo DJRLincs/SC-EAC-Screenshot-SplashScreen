@@ -17,7 +17,7 @@ import json
 
 # the user can also change the location of tthe Launcher folder and the Images folder in the config.json file
 
-delay_time = 25  # the delay time in seconds, currently no support for floats
+
 
 if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
     try:
@@ -35,18 +35,24 @@ else:
             "Note": "This is just a space in the config file \n",
             "edit_launcher_carousel": True,
             "Launcher_Folder": "",
-            "image_folder": ""
+            "Image_Folder": "",
+            "Delay_Time": ""
         }
         json.dump(config, f, indent=4)
+
+
 
 # get the location of the Launcher folder from the config.json file
 LAUNCHER_FOLDER = config["Launcher_Folder"]
 
 # get the location of the Images folder from the config.json file
-IMAGE_FOLDER = config["image_folder"]
+IMAGE_FOLDER = config["Image_Folder"]
+
+# get the delay time from the config.json file
+DELAY_TIME = config["Delay_Time"] 
 
 # if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
-if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "":
+if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "" or DELAY_TIME == "":
     # if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
     if LAUNCHER_FOLDER == "":
         # get the location of the Launcher folder from the user
@@ -59,7 +65,14 @@ if LAUNCHER_FOLDER == "" or IMAGE_FOLDER == "":
         # get the location of the Images folder from the user
         IMAGE_FOLDER = input("Please enter the location of the Images folder: \n")
         # save the location of the Images folder into the config.json file
-        config["image_folder"] = IMAGE_FOLDER
+        config["Image_Folder"] = IMAGE_FOLDER
+        with open("config.json", "w") as f:
+            json.dump(config, f, indent=4)
+    if DELAY_TIME == "":
+        # get the delay time from the user
+        DELAY_TIME = input("Please enter the delay time in seconds: \n")
+        # save the delay time into the config.json file
+        config["Delay_Time"] = DELAY_TIME
         with open("config.json", "w") as f:
             json.dump(config, f, indent=4)
 
@@ -69,7 +82,7 @@ if not os.path.exists(LAUNCHER_FOLDER) or not os.path.exists(IMAGE_FOLDER):
 
     with open("config.json", "w") as f:
         config["Launcher_Folder"] = LAUNCHER_FOLDER
-        config["image_folder"] = IMAGE_FOLDER
+        config["Image_Folder"] = IMAGE_FOLDER
         json.dump(config, f, indent=4)
 
 # the location of the Launcher folder
@@ -77,9 +90,13 @@ launcher_path = Path(LAUNCHER_FOLDER)
 # the location of the Images folder
 image_folder = Path(IMAGE_FOLDER)
 
+# the delay time in seconds
+delay_time = Path(DELAY_TIME)
+
 # your launcher path may look something like this C:\Program Files\Roberts Space Industries\RSI Launcher\resources
 #launcher_path = Path(r"E:\StarCitizen\RSI Launcher\resources")
 #image_folder = Path(r"E:\StarCitizen\Roberts Space Industries\StarCitizen\LIVE\screenshots")
+#delay_Time = Path(r"25")
 
 
 #firstly we make a copy of the launcher file just to be safe and incase we want to revert back
