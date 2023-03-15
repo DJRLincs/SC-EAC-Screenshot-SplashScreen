@@ -17,7 +17,7 @@ import json
 
 # the user can also change the location of tthe Launcher folder and the Images folder in the config.json file
 
-delay_time = 5  # the delay time in seconds, currently no support for floats
+delay_time = 25  # the delay time in seconds, currently no support for floats
 
 if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
     try:
