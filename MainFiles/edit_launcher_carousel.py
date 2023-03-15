@@ -123,14 +123,15 @@ if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists(
     os.rename(path_to_js, launcher_path / "unpacked" / "app" / "original_cig-launcher.js")
 
 # we are looking for this line carousel:{delay:25e3,images:[ this is where the list of image names starts
-pattern = re.compile(r'carousel:{delay:25e3,images:\[([^]]*)\]')
+pattern = re.compile(r',images:\[([^]]*)\]')
+
 delay_pattern = re.compile(r'delay:\d+e\d*,')
 
-test_pattern = re.compile(r'carousel:{delay:\d+\.?\d*,images:\[([^]]*)\]')
+
 # the list of images currently listed in the javascript file, we are going to replace these with our own
 current_img_list = pattern.search(data).group(1)
+# the delay that is currently set in the javascript file, we are going to replace this with our own
 current_delay = delay_pattern.search(data).group(0)
-
 
 
 #this is the list of images we are going to use
