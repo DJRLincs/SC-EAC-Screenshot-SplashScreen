@@ -22,7 +22,7 @@
 <br>
 
 # What the hell does this do?
-The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, and to replace a different screenshot each time the bat is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
+Orginally The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, and to replace a different screenshot each time the bat is invoked. After considerable time and effort from many people, we have now begun to make significant modifications to the launcher itself, such as the wallpaper and eventually music. Depending on the creativity and labour of the individuals working on and maintaining this project, we may even add a status page to the launcher.
 
 # History
 This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG (@DavidRoseLincs) on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax (@Mattie) ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
