@@ -72,6 +72,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Sorry the script is not done yet, please check the GITHUB for updates on the script 
+:: pause
 :: py edit_launcher_music.py
 
 pause

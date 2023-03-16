@@ -23,32 +23,6 @@ except ImportError:
     )
 
 
-# create a config.json file if it doesn't exist and make it so that the file locations are saved into this config.json file
-
-# # this is used to save the location for the next time you run the script 
-
-# the user when running the script for the first time can put in the location of the screenshots folder and the splash folder into command prompt and it will be saved into the config.json file and be pulled everytime the script runs
-
-# the user can also change the location of the screenshots folder and the splash folder in the config.json file
-
-
-## The old config code so if mine doesnt work we can go back to this
-# try:
-#     with open("config.json", "r") as f:
-#         config = json.load(f)
-# except FileNotFoundError:
-#     with open("config.json", "w") as f:
-#         config = {
-#             "Rotate_Screenshot_Splash": True,
-#             "screenshots_folder": "",
-#             "splash_folder": "",
-#             "Note": "This is just a space in the config file",
-#             "edit_launcher_Carousel": False,
-#             "Launcher_Folder": "",
-#             "image_folder": ""
-#         }
-#         json.dump(config, f, indent=4)
-
 if os.path.exists("config.json") and (os.path.getsize("config.json") != 0):
     try:
         with open("config.json", "r") as f:
@@ -65,46 +39,46 @@ else:
             "Note": "This is just a space in the config file \n",
             "edit_launcher_carousel": True,
             "Launcher_Folder": "",
-            "image_folder": "",
+            "Image_Folder": "",
             "Delay_Time": "",
             "Music_Folder": ""
         }
         json.dump(config, f, indent=4)
 
 
-# get the location of the screenshots folder from the config.json file
-SCREENSHOTS_FOLDER = config["screenshots_folder"]
 
-# get the location of the splash folder from the config.json file
+# get the location of the Launcher folder from the config.json file
+SCREENSHOT_FOLDER = config["screenshots_folder"]
+
+# get the location of the Images folder from the config.json file
 SPLASH_FOLDER = config["splash_folder"]
 
-if SCREENSHOTS_FOLDER == "" or SPLASH_FOLDER == "":
+# if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
+if SCREENSHOT_FOLDER == "" or SPLASH_FOLDER == "":
     # if the user has not put in the location of the Launcher folder and the Images folder into command prompt and the config.json file
-    if SCREENSHOTS_FOLDER == "":
+    if SCREENSHOT_FOLDER == "":
         # get the location of the Launcher folder from the user
-        SCREENSHOTS_FOLDER = input("Please enter the location of the Screenshots folder: \n")
+        SCREENSHOT_FOLDER = input("Please enter the location of image folder you wish to use EG: Screenshot's Folder: \n")
         # save the location of the Launcher folder into the config.json file
-        config["screenshots_folder"] = SCREENSHOTS_FOLDER
+        config["screenshots_folder"] = SCREENSHOT_FOLDER
         with open("config.json", "w") as f:
             json.dump(config, f, indent=4)
     if SPLASH_FOLDER == "":
         # get the location of the Images folder from the user
-        IMAGE_FOLDER = input("Please enter the location of the EasyAntiCheat folder: \n")
+        SPLASH_FOLDER = input("Please enter the location of EasyAntiCheat folder in you're LIVE/PTU Folder: \n")
         # save the location of the Images folder into the config.json file
         config["splash_folder"] = SPLASH_FOLDER
         with open("config.json", "w") as f:
             json.dump(config, f, indent=4)
 
-if not os.path.exists(SCREENSHOTS_FOLDER) or not os.path.exists(SPLASH_FOLDER):
-    SCREENSHOTS_FOLDER = input("Please enter the location of the Screenshots folder: \n")
-    SPLASH_FOLDER = input("Please enter the location of the EasyAntiCheat folder: \n")
+if not os.path.exists(SCREENSHOT_FOLDER) or not os.path.exists(SPLASH_FOLDER ):
+    SCREENSHOT_FOLDER = input("Please enter the location of image folder you wish to use EG: Screenshot's Folder: \n")
+    SPLASH_FOLDER = input("Please enter the location of EasyAntiCheat folder in you're LIVE/PTU Folder: \n")
 
     with open("config.json", "w") as f:
-        config["screenshots_folder"] = SCREENSHOTS_FOLDER
+        config["screenshots_folder"] = SCREENSHOT_FOLDER
         config["splash_folder"] = SPLASH_FOLDER
         json.dump(config, f, indent=4)
-    print("The config.json file has been updated with the new locations \n")
-    print("Fun fact: you can also change the location of the screenshots folder to have a folder of selected pictures replace the splash screen \n")
 
     
 
@@ -177,7 +151,7 @@ def resize_and_crop(image, size, crop_type='middle'):
 # method to get the list of screenshots
 def get_screenshots():
     # get the list of screenshots
-    screenshots = os.listdir(SCREENSHOTS_FOLDER)
+    screenshots = os.listdir(SCREENSHOT_FOLDER)
     # return the list of screenshots
     return screenshots
 
@@ -210,7 +184,7 @@ def main():
     print("Replacing splash screen with random screenshot...")
     
     # get the path to the random screenshot
-    random_screenshot_path = os.path.join(SCREENSHOTS_FOLDER, random_screenshot)
+    random_screenshot_path = os.path.join(SCREENSHOT_FOLDER, random_screenshot)
     # get the path to the splash screen
     splash_path = os.path.join(SPLASH_FOLDER, SPLASH_FILE)
 

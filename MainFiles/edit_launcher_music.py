@@ -139,18 +139,18 @@ if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists(
 # we are looking for this line "souns:{bg"
 pattern = re.compile(r'sounds:{bg:\[([^]]*)\]')
 # the list of images currently listed in the javascript file, we are going to replace these with our own
-current_img_list = pattern.search(data).group(1)
+current_music_list = pattern.search(data).group(1)
 
 
 #this is the list of images we are going to use
-new_img_list = []
+new_music_list = []
 for item in music_folder.iterdir():
-    new_img_list.append(f'"/sounds/{item.name}"')
+    new_music_list.append(f'"/sounds/{item.name}"')
 
 #join the list of images into a string
-replacement_string = ",".join(new_img_list)
+replacement_string = ",".join(new_music_list)
 # replace the old list with the new one
-new_data = data.replace(current_img_list, replacement_string)
+new_data = data.replace(current_music_list, replacement_string)
 
 
 # save the original images
