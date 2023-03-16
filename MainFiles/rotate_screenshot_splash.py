@@ -66,7 +66,8 @@ else:
             "edit_launcher_carousel": True,
             "Launcher_Folder": "",
             "image_folder": "",
-            "Delay_Time": ""
+            "Delay_Time": "",
+            "Music_Folder": ""
         }
         json.dump(config, f, indent=4)
 
