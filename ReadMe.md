@@ -4,7 +4,7 @@
 
 <h1 align="center">RSI Launcher Editor</h1>
 
-<h5 align="center">i am meant to have a message here i havent decided on what to put so youre gonna have to manage XD</h5>
+<h5 align="center">"A simple and easy way to edit and change anything in the RSI Launcher for a normal user"</h5>
 
 <p align="center">
   <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen//releases">
