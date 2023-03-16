@@ -2,7 +2,7 @@
   <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/737301647440740453/1077544580737662976/banner.png" width="750px">
 </p>
 
-<h1 align="center">[RSI Launcher](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) Editor</h1>
+<h1 align="center">RSI Launcher Editor</h1>
 
 <h5 align="center">"A simple and easy way to edit and change anything in the RSI Launcher for a normal user"</h5>
 
