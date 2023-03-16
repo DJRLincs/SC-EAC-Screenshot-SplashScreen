@@ -22,12 +22,12 @@
 <br>
 
 # What the hell does this do?
-The purpose of this script is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder or another location, and to replace a different screenshot each time the script is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
+The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder or another location, and to replace a different screenshot each time the bat is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
 
 # History
 This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG (@DavidRoseLincs) on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax (@Mattie) ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
 
-# Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE SCRIPT AS OF 14/03/23)
+# Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE bat AS OF 14/03/23)
 - Python 3.8 or above (https://www.python.org/downloads)
   - Recommended version [3.10.2](https://www.python.org/downloads/release/python-3102/)
 - Node.js Any Version (https://nodejs.org/en/download/)
@@ -39,15 +39,15 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 
 # How to use ✨
-1. Download the [Project](https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen/archive/refs/heads/master.zip) into a zip folder.
+1. Download the [Project](https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/releases/tag/0.0.3) into a zip folder.
 
-2. Download and install [Python](https://www.python.org/downloads/release/python-3102/) if you haven't already. (It can be installed for you with the script automatically)
+2. Download and install [Python](https://www.python.org/downloads/release/python-3102/) if you haven't already. (It can be installed for you with the bat automatically)
 
    ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
 
-3. Download and install [Node.js](https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the script automatically)
+3. Download and install [Node.js](https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the bat automatically)
 
-4. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the script automatically)
+4. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the bat automatically)
 
 5. Extract the zip folder into a location of your choice. (I recommend your desktop)
 
@@ -55,17 +55,17 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 7. Follow the prompts and enter the required information. (You will need to enter your Star Citizen screenshots folder location, and your Star Citizen EasyAntiCheat Folder and or your Star Citizen Launcher folder resources folder location)
 
-8. Once you had run that script run Start_Basic_Win - Rotate_Launcher_Carousel.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
+8. Once you had run that bat run Start_Basic_Win - Rotate_Launcher_Carousel.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
 
 
 
-# Makes the script Automatic OPTIONAL:
+# Makes the bat Automatic OPTIONAL:
 
 - now their is two Bat files still left over depending on youre prefrence
 
-  - "RSI Launcher.bat" Boots the launcher normally with the script ran (You will need to edit the bat to double check its openning stuff in the right locations)
+  - "RSI Launcher.bat" Boots the launcher normally with the bat ran (You will need to edit the bat to double check its openning stuff in the right locations)
 
-  - "RSIShaderWipeLaunch.bat" Boots the launcher with a shader wipe and a script ran (you will need to edit the bat file to double check its openning stuff in the right locations) 
+  - "RSIShaderWipeLaunch.bat" Boots the launcher with a shader wipe and a bat ran (you will need to edit the bat file to double check its openning stuff in the right locations) 
 
 - BOTH OF THESE FILES SHOULD BE RUN AFTER "Start_Basic_Win - Rotate_Splash_Screen.bat" and "Start_Basic_Win - Rotate_Launcher_Carousel.bat" HAS BEEN RUN ONCE
 
