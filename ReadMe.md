@@ -22,7 +22,7 @@
 <br>
 
 # What the hell does this do?
-The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your Star Citizen screenshots folder or another location, and to replace a different screenshot each time the bat is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
+The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading screen with screenshots from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, and to replace a different screenshot each time the bat is invoked. The wallpaper in the launcher is changed to your star citizen screenshots folder or another location with the RSI Launcher Carousel bat.
 
 # History
 This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG (@DavidRoseLincs) on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax (@Mattie) ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
@@ -53,7 +53,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 6. Open the folder and run the "Start_Basic_Win - Rotate_Splash_Screen.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
 
-7. Follow the prompts and enter the required information. (You will need to enter your Star Citizen screenshots folder location, and your Star Citizen EasyAntiCheat Folder and or your Star Citizen Launcher folder resources folder location)
+7. Follow the prompts and enter the required information. (You will need to enter your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder location, and your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) EasyAntiCheat Folder and or your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) Launcher folder resources folder location)
 
 8. Once you had run that bat run Start_Basic_Win - Rotate_Launcher_Carousel.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
 
@@ -97,5 +97,5 @@ We are always seeking intelligent people who are familiar with Batch [Python](ht
 
 - Add an option to configure the fade for how quickly it transitions from one image to another in the launcher.
 
-- There is a potential that this project, which may have originally been created for Star Citizen's [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
+- There is a potential that this project, which may have originally been created for [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC)'s [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
 
