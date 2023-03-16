@@ -22,7 +22,11 @@
 <br>
 
 # What the hell does this do?
-Orginally This bat's function is to replace the images that appear on your [EAC](https://www.easy.ac/) loading screen with images from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, replacing a different image each time the bat is used. We have started to make big changes to the launcher itself after a lot of work and effort from many individuals, including the wallpaper and eventually music. We may even add a status page to the launcher, depending on the ingenuity and labour of the people developing and maintaining this project. things change and we are starting to move to the future just like [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) itself.
+Orginally this bat's function is to replace the images that appear on your [EAC](https://www.easy.ac/) loading screen with images from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, replacing a different image each time the bat is used.
+
+We have started to make big changes to the launcher itself after a lot of work and effort from many individuals, including the wallpaper and eventually music. 
+
+We may even add a status page to the launcher, depending on the ingenuity and labor of the people developing and maintaining this project. Things change, and we are starting to move into the future, just like [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) itself.
 
 # History
 This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). @DJSLincs was kingflashroseG when this post was originally made. @DJSLincs later added comments and a lot more QOL for people who weren't as tech-savvy as @Mattie was. @DJSLincs then created the .bat files and have been using them on his own system for the past year(2022).
@@ -61,7 +65,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 # Make the Bat's Automatic [OPTIONAL]:
 
-- now their is two Bat files still left over depending on youre prefrence
+- Now their is two Bat files still left over depending on youre prefrence
 
   - "RSI Launcher.bat" Boots the launcher normally with the bat ran (You will need to edit the bat to double check its openning stuff in the right locations)
 
