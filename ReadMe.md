@@ -27,7 +27,7 @@ The purpose of this bat is to replace your [EAC](https://www.easy.ac/) loading s
 # History
 This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). I was kingflashroseG (@DavidRoseLincs) on Reddit when this post was originally made. I later added comments and a lot more QOL for people who weren't as tech-savvy as he was. I then created the .bat files and have been using them on my own system for the past year. If Thorax (@Mattie) ever finds it, I will happily give him contributor credit and ownership of this project. He still deserves credit as the project's original creator.
 
-# Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE bat AS OF 14/03/23)
+# Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE BAT AS OF 14/03/23)
 - Python 3.8 or above (https://www.python.org/downloads)
   - Recommended version [3.10.2](https://www.python.org/downloads/release/python-3102/)
 - Node.js Any Version (https://nodejs.org/en/download/)
@@ -59,7 +59,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 
 
-# Makes the bat Automatic OPTIONAL:
+# Makes the Bat Automatic OPTIONAL:
 
 - now their is two Bat files still left over depending on youre prefrence
 
