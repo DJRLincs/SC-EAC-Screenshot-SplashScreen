@@ -59,7 +59,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 
 
 
-# Makes the Bat Automatic OPTIONAL:
+# Make the Bat's Automatic [OPTIONAL]:
 
 - now their is two Bat files still left over depending on youre prefrence
 
