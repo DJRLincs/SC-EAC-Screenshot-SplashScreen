@@ -103,3 +103,7 @@ We are always seeking intelligent people who are familiar with Batch [Python](ht
 
 - There is a potential that this project, which may have originally been created for [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC)'s [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
 
+# Statistics
+
+![Alt](https://repobeats.axiom.co/api/embed/2d3835c88c0331b8e22a2fa12597c52b32adb6b7.svg "Repobeats analytics image")
+
