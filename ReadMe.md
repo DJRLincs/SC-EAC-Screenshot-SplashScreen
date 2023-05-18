@@ -99,6 +99,8 @@ We are always seeking intelligent people who are familiar with Batch [Python](ht
 
 - Add the option to choose a folder for your own music in the Launcher or remove a music folder completely from the Launcher.
 
+- Add Status Tab to the RSI Launcher Tab's 
+
 - Add an option to configure the fade for how quickly it transitions from one image to another in the launcher.
 
 - There is a potential that this project, which may have originally been created for [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC)'s [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
