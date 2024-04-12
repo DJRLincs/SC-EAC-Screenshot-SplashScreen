@@ -1,0 +1,559 @@
+/*! Bundled license information:
+
+@tanstack/match-sorter-utils/build/lib/index.mjs:
+  (**
+   * match-sorter-utils
+   *
+   * Copyright (c) TanStack
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE.md file in the root directory of this source tree.
+   *
+   * @license MIT
+   *)
+  (**
+   * @name match-sorter
+   * @license MIT license.
+   * @copyright (c) 2099 Kent C. Dodds
+   * @author Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com)
+   *)
+
+@kobalte/utils/dist/index.js:
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/da142672eddefa99365773ced72171facc06fdcb/packages/ariakit-utils/src/array.ts
+   *)
+  (*!
+   * Original code by Chakra UI
+   * MIT Licensed, Copyright (c) 2019 Segun Adebayo.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/chakra-ui/blob/main/packages/utils/src/assertion.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/solidjs-community/solid-aria/blob/2c5f54feb5cfea514b1ee0a52d0416878f882351/packages/utils/src/createGlobalListeners.ts
+   *)
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/232bc79018ec20967fec1e097a9474aba3bb5be7/packages/ariakit-utils/src/dom.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/cf9ab24f3255be1530d0f584061a01aa1e8180e6/packages/@react-aria/utils/src/platform.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/a9dea8a3672179e6c38aafd1429daf44c7ea2ff6/packages/@react-aria/utils/src/focusWithoutScrolling.ts
+   *)
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/main/packages/ariakit-utils/src/focus.ts
+   *
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/main/packages/%40react-aria/focus/src/isElementVisible.ts
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/focus/src/FocusScope.tsx
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/f6e686fe9d3b983d48650980c1ecfdde320bc62f/packages/@react-aria/focus/src/FocusScope.tsx
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/a9dea8a3672179e6c38aafd1429daf44c7ea2ff6/packages/@react-aria/utils/src/getScrollParent.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/a9dea8a3672179e6c38aafd1429daf44c7ea2ff6/packages/@react-aria/utils/src/isVirtualEvent.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/ff3e690fffc6c54367b8057e28a0e5b9211f37b5/packages/@react-stately/utils/src/number.ts
+   *)
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/84e97943ad637a582c01c9b56d880cd95f595737/packages/ariakit/src/hovercard/__utils/polygon.ts
+   * https://github.com/ariakit/ariakit/blob/f2a96973de523d67e41eec983263936c489ef3e2/packages/ariakit/src/hovercard/__utils/debug-polygon.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/a9dea8a3672179e6c38aafd1429daf44c7ea2ff6/packages/@react-aria/utils/src/runAfterTransition.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/utils/src/scrollIntoView.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Original code by Chakra UI
+   * MIT Licensed, Copyright (c) 2019 Segun Adebayo.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/chakra-ui/blob/main/packages/color-mode/src/color-mode-context.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Original code by Chakra UI
+   * MIT Licensed, Copyright (c) 2019 Segun Adebayo.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/chakra-ui/blob/main/packages/color-mode/src/storage-manager.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Original code by Chakra UI
+   * MIT Licensed, Copyright (c) 2019 Segun Adebayo.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/chakra-ui/blob/main/packages/color-mode/src/color-mode.utils.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/collections/src/useCollection.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/22cb32d329e66c60f55d4fc4025d1d44bb015d71/packages/@react-stately/collections/src/getItemCount.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from radix-ui-primitives.
+   * MIT Licensed, Copyright (c) 2022 WorkOS.
+   *
+   * Credits to the Radix UI team:
+   * https://github.com/radix-ui/primitives/blob/81b25f4b40c54f72aeb106ca0e64e1e09655153e/packages/react/dismissable-layer/src/DismissableLayer.tsx
+   *
+   * Portions of this file are based on code from zag.
+   * MIT Licensed, Copyright (c) 2021 Chakra UI.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/zag/blob/d1dbf9e240803c9e3ed81ebef363739be4273de0/packages/utilities/dismissable/src/layer-stack.ts
+   *)
+  (*!
+   * Portions of this file are based on code from radix-ui-primitives.
+   * MIT Licensed, Copyright (c) 2022 WorkOS.
+   *
+   * Credits to the Radix UI team:
+   * https://github.com/radix-ui/primitives/blob/81b25f4b40c54f72aeb106ca0e64e1e09655153e/packages/react/focus-scope/src/FocusScope.tsx
+   *
+   * Portions of this file are based on code from zag.
+   * MIT Licensed, Copyright (c) 2021 Chakra UI.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/zag/blob/d1dbf9e240803c9e3ed81ebef363739be4273de0/packages/utilities/focus-scope/src/focus-on-child-unmount.ts
+   * https://github.com/chakra-ui/zag/blob/d1dbf9e240803c9e3ed81ebef363739be4273de0/packages/utilities/focus-scope/src/focus-containment.ts
+   *)
+  (*!
+   * Portions of this file are based on code from zag.
+   * MIT Licensed, Copyright (c) 2021 Chakra UI.
+   *
+   * Credits to the zag team:
+   * https://github.com/chakra-ui/zag/blob/c1e6c7689b22bf58741ded7cf224dd9baec2a046/packages/utilities/form-utils/src/form.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/15e101b74966bd5eb719c6529ce71ce57eaed430/packages/@react-aria/live-announcer/src/LiveAnnouncer.tsx
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * This file is based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/810579b671791f1593108f62cdc1893de3a220e3/packages/@react-aria/overlays/src/ariaHideOutside.ts
+   *)
+  (*!
+   * Portions of this file are based on code from radix-ui-primitives.
+   * MIT Licensed, Copyright (c) 2022 WorkOS.
+   *
+   * Credits to the Radix UI team:
+   * https://github.com/radix-ui/primitives/blob/81b25f4b40c54f72aeb106ca0e64e1e09655153e/packages/react/dismissable-layer/src/DismissableLayer.tsx
+   *
+   * Portions of this file are based on code from zag.
+   * MIT Licensed, Copyright (c) 2021 Chakra UI.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/zag/blob/d1dbf9e240803c9e3ed81ebef363739be4273de0/packages/utilities/interact-outside/src/index.ts
+   *)
+  (*!
+   * Portions of this file are based on code from radix-ui-primitives.
+   * MIT Licensed, Copyright (c) 2022 WorkOS.
+   *
+   * Credits to the Radix UI team:
+   * https://github.com/radix-ui/primitives/blob/21a7c97dc8efa79fecca36428eec49f187294085/packages/react/presence/src/Presence.tsx
+   * https://github.com/radix-ui/primitives/blob/21a7c97dc8efa79fecca36428eec49f187294085/packages/react/presence/src/useStateMachine.tsx
+   *)
+  (*!
+   * Portions of this file are based on code from floating-ui.
+   * MIT Licensed, Copyright (c) 2021 Floating UI contributors.
+   *
+   * Credits to the Floating UI contributors:
+   * https://github.com/floating-ui/floating-ui/blob/f7ce9420aa32c150eb45049f12cf3b5506715341/packages/react/src/components/FloatingOverlay.tsx
+   *
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/5d8a1f047fcadcf117073c70359663a3946b73bf/packages/ariakit/src/dialog/__utils/use-prevent-body-scroll.ts
+   *)
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the ariakit team:
+   * https://github.com/ariakit/ariakit/blob/8a13899ff807bbf39f3d89d2d5964042ba4d5287/packages/ariakit-react-utils/src/hooks.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/a13802d8be6f83af1450e56f7a88527b10d9cadf/packages/@react-stately/toggle/src/useToggleState.ts
+   *)
+  (*!
+   * Portions of this file are based on code from mantinedev.
+   * MIT Licensed, Copyright (c) 2021 Vitaly Rtishchev.
+   *
+   * Credits to the Mantinedev team:
+   * https://github.com/mantinedev/mantine/blob/8546c580fdcaa9653edc6f4813103349a96cfb09/src/mantine-core/src/Transition/get-transition-styles/get-transition-styles.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from mantinedev.
+   * MIT Licensed, Copyright (c) 2021 Vitaly Rtishchev.
+   *
+   * Credits to the Mantinedev team:
+   * https://github.com/mantinedev/mantine/blob/8546c580fdcaa9653edc6f4813103349a96cfb09/src/mantine-core/src/Transition/use-transition.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/70e7caf1946c423bc9aa9cb0e50dbdbe953d239b/packages/@react-aria/label/src/useField.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/i18n/src/utils.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/i18n/src/useDefaultLocale.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/i18n/src/useCollator.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/15e101b74966bd5eb719c6529ce71ce57eaed430/packages/@react-aria/i18n/src/useDateFormatter.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/22cb32d329e66c60f55d4fc4025d1d44bb015d71/packages/@react-aria/i18n/src/useFilter.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/23c3a91e7b87952f07da9da115188bd2abd99d77/packages/@react-aria/i18n/src/useMessageFormatter.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/i18n/src/useNumberFormatter.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/selection/src/Selection.ts
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/selection/src/types.ts
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-types/shared/src/selection.d.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/utils.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/selection/src/useMultipleSelectionState.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/useTypeSelect.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/useSelectableCollection.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/useSelectableItem.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/selection/src/SelectionManager.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/list/src/ListCollection.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/bfce84fee12a027d9cbc38b43e1747e3e4b4b169/packages/@react-stately/list/src/useListState.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/ListKeyboardDelegate.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-aria/selection/src/useSelectableList.ts
+   *)
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/8f2f2acb3d5850382ebe631f055f88c704aa7d17/packages/@react-stately/list/src/useSingleSelectListState.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from ariakit
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the ariakit team:
+   * https://github.com/hope-ui/hope-ui/blob/54125b130195f37161dbeeea0c21dc3b198bc3ac/packages/core/src/button/is-button.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/da142672eddefa99365773ced72171facc06fdcb/packages/ariakit/src/collection/collection-state.ts
+   *)
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/da142672eddefa99365773ced72171facc06fdcb/packages/ariakit/src/collection/collection.tsx
+   * https://github.com/ariakit/ariakit/blob/da142672eddefa99365773ced72171facc06fdcb/packages/ariakit/src/collection/collection-state.ts
+   * https://github.com/ariakit/ariakit/blob/da142672eddefa99365773ced72171facc06fdcb/packages/ariakit/src/collection/collection-item.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/0a1d0cd4e1b2f77eed7c0ea08fce8a04f8de6921/packages/@react-stately/calendar/src/utils.ts
+   *
+   * Portions of this file are based on code from zag, based on code from react-spectrum.
+   * MIT Licensed, Copyright (c) 2021 Chakra UI.
+   *
+   * Credits to the Chakra UI team:
+   * https://github.com/chakra-ui/zag/blob/main/packages/utilities/date-utils/src/pagination.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from radix-ui-primitives.
+   * MIT Licensed, Copyright (c) 2022 WorkOS.
+   *
+   * Credits to the Radix UI team:
+   * https://github.com/radix-ui/primitives/blob/81b25f4b40c54f72aeb106ca0e64e1e09655153e/packages/react/menu/src/Menu.tsx
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/950d45db36e63851f411ed0dc6a5aad0af57da68/packages/@react-stately/datepicker/src/placeholders.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/950d45db36e63851f411ed0dc6a5aad0af57da68/packages/@react-stately/datepicker/src/utils.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/99ca82e87ba2d7fdd54f5b49326fd242320b4b51/packages/%40react-aria/datepicker/src/useDisplayNames.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/84e97943ad637a582c01c9b56d880cd95f595737/packages/ariakit/src/hovercard/__utils/polygon.ts
+   * https://github.com/ariakit/ariakit/blob/f2a96973de523d67e41eec983263936c489ef3e2/packages/ariakit/src/hovercard/__utils/debug-polygon.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/blob/6b51339cca0b8344507d3c8e81e7ad05d6e75f9b/packages/@react-aria/tabs/src/TabsKeyboardDelegate.ts
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from react-spectrum.
+   * Apache License Version 2.0, Copyright 2020 Adobe.
+   *
+   * Credits to the React Spectrum team:
+   * https://github.com/adobe/react-spectrum/tree/main/packages/%40react-aria/toast/intl
+   *)
+
+@kobalte/core/dist/esm/index.js:
+  (*!
+   * Portions of this file are based on code from ariakit.
+   * MIT Licensed, Copyright (c) Diego Haz.
+   *
+   * Credits to the Ariakit team:
+   * https://github.com/ariakit/ariakit/blob/84e97943ad637a582c01c9b56d880cd95f595737/packages/ariakit/src/hovercard/__utils/polygon.ts
+   * https://github.com/ariakit/ariakit/blob/f2a96973de523d67e41eec983263936c489ef3e2/packages/ariakit/src/hovercard/__utils/debug-polygon.ts
+   *)
+*/
