@@ -1,7 +1,6 @@
 <p align="center">
-  <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/737301647440740453/1077544580737662976/banner.png" width="750px">
+  <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/1077537871382196314/1077537871508021278/5n69n2xv5p681.png?ex=66278dd8&is=661518d8&hm=3c891eeb3ca1b61f0aa878686892b3ce81a0c6957f884a3ff7d0807849092d4c&" width="750px">
 </p>
-
 <h1 align="center">RSI Launcher Editor</h1>
 
 <h5 align="center">"A simple and easy way to edit and change anything in the RSI Launcher for a normal user"</h5>
