@@ -1,7 +1,14 @@
 @echo off
 title RSI Launcher Editor - Rotate Launcher Carousel
-et "params=%*"
-cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
+
+net session >nul 2>&1
+if %errorLevel% == 0 (
+  echo Running with admin privileges
+) else (
+  echo Requesting admin privileges...
+  powershell -Command "Start-Process -Verb RunAs cmd.exe '/c %~dpnx0 %*'"
+) 
+:: Check if running with admin privileges
 :: this bit is very much a test for admin perms when you replace the Carousel it will need to be able to write in the folder
 
 echo.
