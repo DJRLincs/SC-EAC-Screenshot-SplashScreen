@@ -5,8 +5,9 @@ from pathlib import Path
 import re
 import shutil
 import json
-from get_launcher_version import getFileProperties
-from v2_edit_functions import change_background_video, change_launcher_sounds, change_launcher_music
+from get_launcher_version import version_number
+import v1_edit_functions as v1
+import v2_edit_functions as v2
 
 mode= "NEW"
 
@@ -51,8 +52,7 @@ LAUNCHER_FOLDER = config["Launcher_Folder"]
 #remove \resources from the end of the path
 # get the current version of the launcher from the executables file properties
 EXECUTABLE_PATH = LAUNCHER_FOLDER.replace("\\resources", "")
-current_version = getFileProperties(EXECUTABLE_PATH + "\\RSI Launcher.exe")["StringFileInfo"]["FileVersion"]
-current_version = current_version.split(".")[0]
+current_version = version_number(EXECUTABLE_PATH + "\\RSI Launcher.exe")[0]
 
 
 
@@ -217,7 +217,7 @@ if mode == "NEW":
 
     if bg_video != "":
         # change the background video
-        data = change_background_video(bg_video, data, launcher_path / "unpacked" / "app")
+        data = v2.change_background_video(bg_video, data, launcher_path / "unpacked" / "app")
 
     with open(path_to_js, "w") as f:
         f.write(data)

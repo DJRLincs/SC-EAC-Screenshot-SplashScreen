@@ -28,29 +28,68 @@ def change_background_video(video_path, js_data, root_path):
 
     return js_data
 
-def change_launcher_sounds(sounds_path, js_data):
+def change_launcher_sounds(js_data, new_open = None, new_error = None, new_save = None):
     # Define the regular expression pattern to match the music data
-    pattern = r'\b(sounds:\s*{[^}]+})'
-    match =  re.findall(pattern, js_data)[0]
+    pattern_main = r'\b(sounds:\s*{[^}]+})'
+    pattern_open = r'open:\s*".*?"'
+    pattern_error = r'error:\s*".*?"'
+    pattern_save = r'save:\s*".*?"'
 
-def change_launcher_music(music_path, js_data):
+    match =  re.findall(pattern_main, js_data)[0]
+    open_sound = re.findall(pattern_open, match)[0]
+    error_sound = re.findall(pattern_error, match)[0]
+    save_sound = re.findall(pattern_save, match)[0]
+
+    #this might need to change depending on how the sounds are passed to the function, pending config rework
+
+    if new_open:
+        js_data = js_data.replace(open_sound, f'open: "/sounds/{new_open}"')
+    if new_error:
+        js_data = js_data.replace(error_sound, f'error: "/sounds/{new_error}"')
+    if new_save:
+        js_data = js_data.replace(save_sound, f'save: "/sounds/{new_save}"')
+
+
+    return js_data
+
+
+def change_launcher_music(js_data, root_path, music_path=None):
     # Define the regular expression pattern to match the music data
     pattern = r'\b(musics:\s*{[^}]+})'
     match =  re.findall(pattern, js_data)[0]
+
+    # get the names of tracks in the music_path
+    tracks = os.listdir(music_path)
+    # check that they are all audio files
+    for track in tracks:
+        if not track.endswith((".wav", ".ogg", ".mp3")):
+            assert False, f"File {track} is not an audio file. Please provide only audio files."
+
+    #copy all the tracks to the /assets/musics folder
+    for track in tracks:
+        shutil.copy(os.path.join(music_path, track), os.path.join(root_path, "assets", "musics", track))
+
+    new_data = ""
+    for index, name in enumerate(tracks):
+        # Replace the music path
+        temp = f'bg{index+1}:"/musics/{name}",'
+        new_data += temp
+    replacement = "musics:{" + new_data + "}"
+    js_data = js_data.replace(match, replacement)
+
+    return js_data
 
 if __name__ == "__main__":
     print("This is a test.")
     # test_video = r""
     # root_path = r""
-    # path_to_js = r""
+    path_to_js = r"C:\Users\20210777\Documents\SC-EAC-Screenshot-SplashScreen\unpacked_2.0\app\static\js\main.ab62df5e.js"
     #intentially commented out to prevent accidental execution
     with open(path_to_js, "r") as f:
         data = f.read()
 
-    new_data = change_background_video(test_video, data, root_path)
-    with open("test_file.js", "w") as f:
-        f.write(new_data)
-    # print(change_launcher_sounds("test", data))
+
+    print(change_launcher_sounds(data))
     # print(change_launcher_music("test", data))
 
 

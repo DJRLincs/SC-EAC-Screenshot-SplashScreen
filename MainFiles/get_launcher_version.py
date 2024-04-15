@@ -41,6 +41,11 @@ def getFileProperties(fname):
 
     return props
 
+def version_number(fname):
+    props = getFileProperties(fname)
+    full_version = props['StringFileInfo']['FileVersion']
+    version = full_version.split(".")[0]
+    return version, full_version
 
 
 

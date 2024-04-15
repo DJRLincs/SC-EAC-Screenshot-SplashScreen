@@ -78,7 +78,7 @@ This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.
 # Help needed?
 Join [ARMCO](https://discord.gg/armco) and ask for kingflashroseG#5130 OR look in the [Thread](https://discord.com/channels/222052888531173386/1077537871382196314).
 
-Hope you enjoy it :I
+Hope you enjoy it :)
 
 # Contributors
 Big thanks to all of the people who worked on this project!
