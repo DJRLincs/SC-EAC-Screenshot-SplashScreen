@@ -6,6 +6,8 @@ import re
 import shutil
 import json
 from get_launcher_version import getFileProperties
+from v2_edit_functions import change_background_video, change_launcher_sounds, change_launcher_music
+
 mode= "NEW"
 
 # You need to have npm installed for this to work https://phoenixnap.com/kb/install-node-js-npm-on-windows
@@ -161,11 +163,12 @@ else:
 with open(path_to_js, "r") as f:
     data = f.read()
 
-#rename the original javascript file, so we have it just incase
-if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists():
-    os.rename(path_to_js, launcher_path / "unpacked" / "app" / "original_cig-launcher.js")
 
 if mode == "OLD":
+    # rename the original javascript file, so we have it just incase
+    if not (launcher_path / "unpacked" / "app" / "original_cig-launcher.js").exists():
+        os.rename(path_to_js, launcher_path / "unpacked" / "app" / "original_cig-launcher.js")
+
     # we are looking for this line carousel:{delay:25e3,images:[ this is where the list of image names starts
     pattern = re.compile(r',images:\[([^]]*)\]')
 
@@ -204,31 +207,21 @@ if mode == "OLD":
 
 if mode == "NEW":
     pass
+    #TODO rework the config system to allow for all options
+    # recommend creating a separate file which prompts the user to enter the required information if not available in the config file
+    # we can cut a lot of code from here (and elsewhere) and make it more readable
 
-###---------------------------------------------------------------------------------------------------------------------
-# sounds: {
-#             open: "/sounds/phazein.wav",
-#             error: "/sounds/website_ui_rejection.wav",
-#             save: "/sounds/website_ui_savesettings.wav",
-#           },
-#           musics: {
-#             bg1: "/musics/SC_DL_Raven_Music_23LUFS.ogg",
-#             bg2: "/musics/SC_PMC_600i_v31_24bit_23LUFS.ogg",
-#             bg3: "/musics/SC_PMC_First Light_23LUFS.ogg",
-#             bg4: "/musics/SC_PMC_Main_Theme_23LUFS.ogg",
-#             bg5: "/musics/SC_PMC_Majesty of Space_23LUFS.ogg",
-#             bg6: "/musics/SC_PMC_Mind Games_23LUFS.ogg",
-#           },
-#           gameAssets: [
-#             {
-#               id: "SC",
-#               logo: "/logos/sc-game-logo-small.svg",
-#               logoWide: "/logos/sc-game-logo-wide.svg",
-#               logoAnimation: "/logos/sc-logo-animation.json",
-#               bgImage: "/images/sc_bg_fallback.jpg",
-#               bgVideo: "/videos/sc_bg_video.webm",
-#             }
-### --------------------------------------------------------------------------------------------------------------------
+    # rename the original javascript file, so we have it just incase
+    if not (launcher_path / "unpacked" / "app" / "static" / "js" / "original_main.js").exists():
+        os.rename(path_to_js, launcher_path / "unpacked" / "app" / "static" / "js" / "original_main.js")
+
+    if bg_video != "":
+        # change the background video
+        data = change_background_video(bg_video, data, launcher_path / "unpacked" / "app")
+
+    with open(path_to_js, "w") as f:
+        f.write(data)
+
 
 # The command to unpack the launcher file
 npx_command_pack = ["npx", "asar", "pack", "unpacked", "app.asar"]
