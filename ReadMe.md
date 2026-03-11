@@ -1,9 +1,9 @@
 <p align="center">
   <img alt="ImageExample" src="https://cdn.discordapp.com/attachments/1077537871382196314/1077537871508021278/5n69n2xv5p681.png?ex=66278dd8&is=661518d8&hm=3c891eeb3ca1b61f0aa878686892b3ce81a0c6957f884a3ff7d0807849092d4c&" width="750px">
 </p>
-<h1 align="center">RSI Launcher Editor</h1>
+<h1 align="center">DJRLincs Tweaks for RSI Launcher</h1>
 
-<h5 align="center">"A simple and easy way to edit and change anything in the RSI Launcher for a normal user"</h5>
+<h5 align="center">"Enhance your RSI Launcher with SCR Racing integration and customization options"</h5>
 
 <p align="center">
   <a href="https://github.com/DavidRoseLincs/SC-EAC-Screenshot-SplashScreen//releases">
@@ -13,98 +13,157 @@
   <a href="https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/commits/master">
     <img src="https://img.shields.io/github/last-commit/DJRLincs/SC-EAC-Screenshot-SplashScreen?logo=GitHub&style=for-the-badge">
   </a>
-  
-  
-  
 </p>
 
 <br>
 
-# What the hell does this do?
-Orginally this bat's function is to replace the images that appear on your [EAC](https://www.easy.ac/) loading screen with images from your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder or another location, replacing a different image each time the bat is used.
+# What is this?
 
-We have started to make big changes to the launcher itself after a lot of work and effort from many individuals, including the wallpaper and eventually music. 
+DJRLincs Tweaks is a launcher modification that adds:
 
-We may even add a status page to the launcher, depending on the ingenuity and labor of the people developing and maintaining this project. Things change, and we are starting to move into the future, just like [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) itself.
+- **SCR (Star Citizen Racing) Tab** - View latest racing runs, track images, and upcoming events directly in your launcher
+- **DJRLincs Tweaks Panel** - Customize your launcher background with presets or custom images
+- **Country Flags** - See racer nationalities with flag icons
+- **Track Images** - Beautiful track header images on run cards
+- **Optional DevTools** - For developers who want to inspect the launcher
+
+## Features
+
+### SCR Racing Integration
+- Latest runs from Star Citizen Racing leaderboards
+- Track images as card backgrounds
+- Upcoming events with countdown timers
+- Direct links to SCR website
+
+### Customization
+- Multiple background presets
+- Custom image URL support
+- Settings persist across sessions
+
+## Requirements
+
+- **Windows** (PowerShell 5.1+)
+- **Node.js** - [Download here](https://nodejs.org/en/download/)
+- **RSI Launcher 2.0+**
+
+## Installation
+
+### Quick Install (Recommended)
+
+1. Download or clone this repository
+2. Open the `MainFiles` folder
+3. **Double-click `Install.bat`**
+
+That's it! The script will request admin privileges and handle everything.
+
+### Alternative: PowerShell
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ".\Install-DJRLincsTweaks.ps1"
+```
+
+### Custom Launcher Location
+
+```powershell
+powershell -ExecutionPolicy Bypass -File ".\Install-DJRLincsTweaks.ps1" -LauncherPath "D:\Games\RSI Launcher"
+```
+
+### Enable DevTools (For Development)
+
+After installing, run `EnableDevTools.bat` to add Chrome DevTools support.
+
+## Uninstallation
+
+**Double-click `Uninstall.bat`** to restore the original launcher.
+
+Or via PowerShell:
+```powershell
+powershell -ExecutionPolicy Bypass -File ".\Uninstall-DJRLincsTweaks.ps1"
+```
+
+Or manually:
+```powershell
+Copy-Item "C:\Program Files\Roberts Space Industries\RSI Launcher\resources\app.asar.backup" "C:\Program Files\Roberts Space Industries\RSI Launcher\resources\app.asar" -Force
+```
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `Install.bat` | Double-click to install |
+| `Uninstall.bat` | Double-click to restore original |
+| `EnableDevTools.bat` | Optional: Add DevTools support |
+| `Install-DJRLincsTweaks.ps1` | PowerShell installer |
+| `Uninstall-DJRLincsTweaks.ps1` | PowerShell uninstaller |
+| `Enable-DevTools.ps1` | PowerShell DevTools enabler |
+| `scr_tab_inline.js` | Main injection script (~100KB) |
+| `archive/` | Old Python scripts (deprecated) |
+
+## How It Works
+
+The installer:
+1. Extracts `app.asar` from the RSI Launcher
+2. Injects `scr_tab_inline.js` into the launcher's HTML
+3. Repacks and installs the modified launcher
+
+Backups are automatically created:
+- `app.asar.backup` - Original launcher archive
+- `app.asar.unpacked.backup` - Original native modules folder
+
+The optional DevTools enabler (`EnableDevTools.bat`) applies additional patches to `lib/main.js`.
+
+## Troubleshooting
+
+**Launcher won't start after installation:**
+- Run `Uninstall.bat` to restore original
+- Make sure Node.js is installed (`node --version`)
+
+**Launcher crashes after uninstall:**
+- This can happen if the backup is missing the `.unpacked` folder
+- Reinstall the RSI Launcher from https://robertsspaceindustries.com/download
+- Then run Install.bat again to create a fresh backup
+
+**SCR data not loading:**
+- Check your internet connection
+- The SCR API may be temporarily unavailable
+
+**"Access denied" errors:**
+- Make sure to run PowerShell as Administrator
 
 # History
-This was originally created in 2022 by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/). @DJSLincs was kingflashroseG when this post was originally made. @DJSLincs later added comments and a lot more QOL for people who weren't as tech-savvy as @Mattie was. @DJSLincs then created the .bat files and have been using them on his own system for the past year(2022).
 
-# Requirements 🧾 (ALL OF THIS DOWNLOADS AUTOMATICALLY WITH THE BAT AS OF 14/03/23)
-- Python 3.8 or above (https://www.python.org/downloads)
-  - Recommended version [3.10.2](https://www.python.org/downloads/release/python-3102/)
-- Node.js Any Version (https://nodejs.org/en/download/)
-  - this is what does the compiling for the launcher wallpaper's [Node.js](https://nodejs.org/en/download/)
-- [Pillow](https://pillow.readthedocs.io/en/stable/installation.html)
-  - Installs when the script is ran that requires it
-- Patience
-  - Take youre time if you need help just ask trust me
+This project evolved from a simple EAC splash screen replacer (2022) into a full launcher customization system:
 
+- **2022** - Original EAC splash screen script by thorax (@Mattie) on [Reddit](https://www.reddit.com/r/starcitizen/comments/rkmz93/fyi_we_can_have_custom_splash_screens_now_until/)
+- **2023** - @DJRLincs added carousel/music customization with Python scripts
+- **2026** - Complete rewrite with direct launcher injection, SCR integration, and DJRLincs Tweaks panel
 
-# How to use ✨
-1. Download the [Project](https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/releases/tag/0.0.3) into a zip folder.
+# Help
 
-2. Download and install [Python](https://www.python.org/downloads/release/python-3102/) if you haven't already. (It can be installed for you with the bat automatically)
-
-   ![](https://i.alexflipnote.dev/2Ucs5Hf.png)
-
-3. Download and install [Node.js](https://nodejs.org/en/download/) if you haven't already. (It can be installed for you with the bat automatically)
-
-4. Download and install [Pillow](https://pypi.org/project/Pillow/) if you haven't already. (It can be installed for you with the bat automatically)
-
-5. Extract the zip folder into a location of your choice. (I recommend your desktop)
-
-6. Open the folder and run the "Start_Basic_Win - Rotate_Splash_Screen.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
-
-7. Follow the prompts and enter the required information. (You will need to enter your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) screenshots folder location, and your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) EasyAntiCheat Folder and or your [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC) Launcher folder resources folder location)
-
-8. Once you had run that bat run Start_Basic_Win - Rotate_Launcher_Carousel.bat" file. please try to keep the .bat files in the same place as the .py files as they are hardcoded to open them in the same location currently.
-
-
-
-# Make the Bat's Automatic [OPTIONAL]:
-
-- Now their is two Bat files still left over depending on youre prefrence
-
-  - "RSI Launcher.bat" Boots the launcher normally with the bat ran (You will need to edit the bat to double check its openning stuff in the right locations)
-
-  - "RSIShaderWipeLaunch.bat" Boots the launcher with a shader wipe and a bat ran (you will need to edit the bat file to double check its openning stuff in the right locations) 
-
-- BOTH OF THESE FILES SHOULD BE RUN AFTER "Start_Basic_Win - Rotate_Splash_Screen.bat" and "Start_Basic_Win - Rotate_Launcher_Carousel.bat" HAS BEEN RUN ONCE
-
-- After you have edited them, right click on either one or both and create shortcuts for them. You can then move them to your desktop, remove your original RSI Launcher shortcut, and then go into the properties of the shortcuts and give them icons and edit their names to look identical to a normal boot.
-
-
-# Help needed?
-Join [ARMCO](https://discord.gg/armco) and ask for kingflashroseG#5130 OR look in the [Thread](https://discord.com/channels/222052888531173386/1077537871382196314).
-
-Hope you enjoy it :I
+Join [ARMCO](https://discord.gg/armco) and ask for help in the [Thread](https://discord.com/channels/222052888531173386/1077537871382196314).
 
 # Contributors
+
 Big thanks to all of the people who worked on this project!
 
 <a href="https://github.com/DJRLincs/SC-EAC-Screenshot-SplashScreen/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=DJRLincs/SC-EAC-Screenshot-SplashScreen" />
 </a>
 
-# Want to help with the project?
-We are always seeking intelligent people who are familiar with Batch [Python](https://www.python.org/downloads/release/python-3102/) and [Node.js](https://nodejs.org/en/download/). The only other two requirements are [Visual Studio Code](https://code.visualstudio.com/download) and [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens). Fortunately, when you run the script, two of the requirements are automatically installed for you. Immediately afterward, you may utilise it to study the repository by cloning this current one inside Visual Studio Code. Feel free to explore, pick up new skills, and come up with new ideas. Then, submit a pull request to the repository. I'll review it, and every contribution you make will add you to the list of contributors above.
+# Roadmap
 
-
-# To the future
-- I'd like to replace the Carousel (Wallpaper's) in RSI launcher with screenshots as well, but I'm not sure how to achieve it just yet. (ACHIEVED AS OF 14/03/23)
-
-- allowing you to select your directory only once rather than having the locations hardcoded into each system [ACHIEVED AS OF 10/03/23]
-
-- Add the option to choose a folder for your own music in the Launcher or remove a music folder completely from the Launcher.
-
-- Add Status Tab to the RSI Launcher Tab's 
-
-- Add an option to configure the fade for how quickly it transitions from one image to another in the launcher.
-
-- There is a potential that this project, which may have originally been created for [Star Citizen](https://robertsspaceindustries.com/enlist?referral=STAR-56VG-HCMC)'s [EAC](https://www.easy.ac/), will be renamed and modified to work for as many [EAC](https://www.easy.ac/) games as possible.
+- [x] SCR Racing tab integration
+- [x] Custom background support
+- [x] Track images on run cards
+- [x] Country flags for racers
+- [x] One-click PowerShell installer
+- [ ] Server status integration
+- [ ] Custom music support
+- [ ] More background presets
 
 # Statistics
+
+![Alt](https://repobeats.axiom.co/api/embed/2d3835c88c0331b8e22a2fa12597c52b32adb6b7.svg "Repobeats analytics image")
 
 ![Alt](https://repobeats.axiom.co/api/embed/2d3835c88c0331b8e22a2fa12597c52b32adb6b7.svg "Repobeats analytics image")
 
